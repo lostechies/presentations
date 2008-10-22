@@ -1,0 +1,64 @@
+0.) Introduction
+    a.) Meet the Presenter?  (LosTechies)
+    b.) What is NHibernate?
+        i.) Based on the Java Hibernate framework (5+ years in production)
+        ii.) Supports many databases
+    c.) Why would I use it?
+        i.) Persistence Ignorance
+        ii.) Separation of Concerns
+        iii.) Ease of database interoperability (keeping schema changes separate from app changes)
+    d.) When would I use it? When wouldn't I?
+    e.) What instead?
+        i.) iBatis
+        ii.) Linq2Sql, Entity Framework
+1.) Installation
+    a.) http://shrinkster.com/11vi download 2.0GA and unzip
+    b.) Install xml schemas to %ProgramFiles%\Microsoft Visual Studio 9.0\Xml\Schemas
+    c.) Add reference to NHibernate.dll
+2.) Configuration, CRUD mapping, session, 1st level cache
+    a.) CRUD Mapping:
+      i.) Add domain object, add table (if necessary)
+      ii.) Add HBM XML document as Embedded Resource
+      iii.) Add xml mapping (remember assembly/namespace in hibernate-mapping)    
+    b.) Configuration:
+      i.) Add the config to the app.config file
+      ii.) In code, create the configuration object and add the assembly
+      iii.) Call BuildSessionFactory to get the factory
+    c.) Session:
+      i.) CRUD (save, load, update, delete), querying, transactions, etc
+      ii.) Talk about Flush
+      iii.) Talk about 1st Level Cache
+    d.) Schema Generation
+      //TODO:
+3.) Relationship mapping (OTM/MTO, MTM, bag/set/list, etc), lazy loading, etc
+    a.) MTO
+      i.) Talk about cascade options
+      ii.) fetch strageties, join strategies
+    b.) Collections
+      i.) General coverage of bag/set/list
+        a.) ordering, where   
+      ii.) OTM
+      iii.) MTM
+      iv.) Many-to-any
+4.) Object lifecycles
+    a.) When associated objects are saved
+        i.) Explicit call to Save(), SaveOrUpdate(), or Update()
+        ii.) **OR** Association mapped with cascade="all" or cascade="save-update"
+    b.) When associated objects are deleted
+        i.) Explicit call to Delete()
+        ii.) **OR** Association mapped with cascade="all", "all-delete-orphan", or "delete"
+        iii.) NOTE: all-delete-orphan requires inverse=true it mapped both ways
+    c.) Recommendations for cascading:
+        i.) Use cascade all for true parent/childs
+        ii.) If not "all", then use save-update and manage delete() explicitly 
+    d.) "Lifecycle Objects" (cascade="all")
+5.) Querying with HQL and ICriteria
+    a.) Basic queries
+    b.) Projections/Aggregates
+    c.) Joins/Related Selects
+6.) Interceptors, user types, 2nd-level caching, named queries
+7.) Unit of Work pattern, Linq2NHibernate for querying
+
+
+//TODO:
+- Create well-defined model with diagram
