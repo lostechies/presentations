@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A9B4E515-9FE5-4D86-AA9D-F8E4E761B4DF}</ProjectGuid>
+    <ProjectGuid>{4AF22FF4-7509-4D9A-87FC-48AC6EF5FF6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InternalDSL.Core</RootNamespace>
-    <AssemblyName>InternalDSL.Core</AssemblyName>
+    <RootNamespace>InternalDSL.Tests</RootNamespace>
+    <AssemblyName>InternalDSL.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.6.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,12 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accessor.cs" />
-    <Compile Include="BasicExtensions.cs" />
+    <Compile Include="AdvCSharp\2_Closure_Example.cs" />
+    <Compile Include="AdvCSharp\3_Initializers_Examples.cs" />
+    <Compile Include="AdvCSharp\1_Lambda_Examples.cs" />
+    <Compile Include="AdvCSharp\4_Expression_Tree_Examples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyChain.cs" />
-    <Compile Include="ReflectionHelper.cs" />
-    <Compile Include="SingleProperty.cs" />
+    <Compile Include="SpecificationExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InternalDSL.Core\InternalDSL.Core.csproj">
+      <Project>{A9B4E515-9FE5-4D86-AA9D-F8E4E761B4DF}</Project>
+      <Name>InternalDSL.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
