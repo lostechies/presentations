@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Linq;
 
-namespace InternalDSL.Core
+namespace InternalDSL.Core.Util
 {
     public class PropertyChain : Accessor
     {

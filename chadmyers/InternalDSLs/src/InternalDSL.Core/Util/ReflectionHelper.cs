@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
+using InternalDSL.Core.Util;
 
-namespace InternalDSL.Core
+namespace InternalDSL.Core.Util
 {
     public static class ReflectionHelper
     {

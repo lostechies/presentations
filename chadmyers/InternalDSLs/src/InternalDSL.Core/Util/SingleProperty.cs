@@ -2,7 +2,7 @@ using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace InternalDSL.Core
+namespace InternalDSL.Core.Util
 {
     public class SingleProperty : Accessor
     {

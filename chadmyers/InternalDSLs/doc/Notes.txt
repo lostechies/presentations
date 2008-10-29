@@ -1,0 +1,16 @@
+1:30 - 4:30
+
+1:30; 10m - Intro, housekeeping
+1:40; 20m - Adv. C# 3, Closures, Expression Trees, etc
+2:20; 20m - Internal DSL basics & high level patterns
+2:20; 10m - break
+
+2:30; 50m - Internal DSLs Patterns
+3:20; 10m - break
+
+3:30; 50m - Internal DSLs In Practice
+4:10; 10m - Wrapping it up
+
+
+Preparation:
+- Have InternalDSLs, FluentNHibernate, Dovetail, and StructureMap source on your laptop

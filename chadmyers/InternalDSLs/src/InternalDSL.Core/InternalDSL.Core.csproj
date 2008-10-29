@@ -45,12 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accessor.cs" />
-    <Compile Include="BasicExtensions.cs" />
+    <Compile Include="NotificationDSL\Model\EmailNotification.cs" />
+    <Compile Include="NotificationDSL\Model\MessageTemplate.cs" />
+    <Compile Include="Util\Accessor.cs" />
+    <Compile Include="Util\BasicExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyChain.cs" />
-    <Compile Include="ReflectionHelper.cs" />
-    <Compile Include="SingleProperty.cs" />
+    <Compile Include="Util\PropertyChain.cs" />
+    <Compile Include="Util\ReflectionHelper.cs" />
+    <Compile Include="Util\SingleProperty.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

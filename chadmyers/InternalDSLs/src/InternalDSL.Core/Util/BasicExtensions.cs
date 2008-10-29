@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace InternalDSL.Core
+namespace InternalDSL.Core.Util
 {
     public static class BasicExtensions
     {
