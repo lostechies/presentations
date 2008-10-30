@@ -45,8 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NotificationDSL\Model\EmailNotification.cs" />
-    <Compile Include="NotificationDSL\Model\MessageTemplate.cs" />
+    <Compile Include="FairyTaleDSL\DSL\FairyTaleBuilder.cs" />
+    <Compile Include="FairyTaleDSL\Model\FairyTale.cs" />
+    <Compile Include="FairyTaleDSL\Model\Introductions.cs" />
+    <Compile Include="FairyTaleDSL\Model\PlotEndings.cs" />
+    <Compile Include="FairyTaleDSL\Model\PlotParts.cs" />
+    <Compile Include="FairyTaleDSL\Model\StoryEndings.cs" />
+    <Compile Include="FairyTaleDSL\Model\SubjectFocii.cs" />
     <Compile Include="Util\Accessor.cs" />
     <Compile Include="Util\BasicExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
