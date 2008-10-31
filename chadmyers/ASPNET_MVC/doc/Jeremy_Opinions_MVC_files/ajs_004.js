@@ -1,0 +1,13 @@
+var MAX_31a08578 = '';
+MAX_31a08578 += "<"+"script type=\"text/javascript\"><"+"!--\n";
+MAX_31a08578 += "google_ad_client = \"pub-2785396000675099\";\n";
+MAX_31a08578 += "/* 336x280, created 4/8/08 */\n";
+MAX_31a08578 += "google_ad_slot = \"8172138410\";\n";
+MAX_31a08578 += "google_ad_width = 336;\n";
+MAX_31a08578 += "google_ad_height = 280;\n";
+MAX_31a08578 += "//-->\n";
+MAX_31a08578 += "<"+"/script>\n";
+MAX_31a08578 += "<"+"script type=\"text/javascript\"\n";
+MAX_31a08578 += "src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">\n";
+MAX_31a08578 += "<"+"/script><"+"div id=\'beacon_13\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'http://ads.codebetter.com/delivery/lg.php?bannerid=13&amp;campaignid=7&amp;zoneid=21&amp;loc=http%3A%2F%2Fcodebetter.com%2Fblogs%2Fjeremy.miller%2Farchive%2F2008%2F10%2F23%2Four-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx&amp;referer=http%3A%2F%2Fwww.google.com%2Freader%2Fview%2F&amp;cb=d80cd5e77c\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+document.write(MAX_31a08578);

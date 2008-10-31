@@ -1,0 +1,72 @@
+#comments h2
+{
+	color: #666;
+	font-size: 1em;
+	margin-top: 16px;
+}
+
+.CommentArea
+{
+	margin: 8px 0px 8px 0px; 
+}
+
+.CommentAreaOwner
+{
+	margin: 8px 0px 8px 0px;
+}
+
+.CommentAreaOwner .CommentText3
+{
+	background-color: #f3f3f3;
+}
+
+.CommentTitle
+{
+	margin-bottom: 6px;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.CommentAreaOwner .CommentTitle
+{
+	font-weight: bold;
+}
+
+.CommentArrow
+{
+	background-image: url(../images/comment-arrow.gif);
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	margin-bottom: -12px;
+}
+
+.CommentText
+{
+	padding-bottom: 3px;
+	background-image: url(../images/comment-shadow.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+.CommentText2
+{
+	border: solid 1px #bcbcbc;
+	padding: 3px;
+}
+
+.CommentText3
+{
+	padding: 5px;
+	font-size: .9em;
+	overflow: hidden;
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.CommentFooter
+{
+	margin-top: 4px;
+	font-size: .7em;
+	color: #999999;
+	padding-left: 16px;
+}

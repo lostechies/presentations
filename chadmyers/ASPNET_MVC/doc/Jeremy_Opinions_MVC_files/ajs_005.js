@@ -1,0 +1,5 @@
+var MAX_18931cb0 = '';
+MAX_18931cb0 += "<"+"a href=\"http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=3__zoneid=4__cb=d40618778c__maxdest=http://www.red-gate.com/products/SQL_Compare/index.htm?utm_source=cb&utm_medium=banner&utm_campaign=sqlcompare\" target=\"_blank\"><"+"div style=\"margin-left: 4px; margin-bottom: 4px;\">\n";
+MAX_18931cb0 += "<"+"img src=\"http://codebetter.com/ads/ScriptingManually_300x250.gif\" mce_src=\"/ads/ScriptingManually_300x250.gif\" border=\"0\">\n";
+MAX_18931cb0 += "<"+"/div><"+"/a><"+"div id=\'beacon_3\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'http://ads.codebetter.com/delivery/lg.php?bannerid=3&amp;campaignid=2&amp;zoneid=4&amp;channel_ids=,&amp;loc=http%3A%2F%2Fcodebetter.com%2Fblogs%2Fjeremy.miller%2Farchive%2F2008%2F10%2F23%2Four-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx&amp;referer=http%3A%2F%2Fwww.google.com%2Freader%2Fview%2F&amp;cb=d40618778c\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+document.write(MAX_18931cb0);

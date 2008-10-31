@@ -1,0 +1,1985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head id="ctl00_ctl00_ctl00_ctl00">
+
+
+
+        <meta name="keywords" content="Design Patterns">
+<meta name="description" content="ALT.NET dotnet .NET C# Agile BizTalk ASP.NET">
+<meta name="GENERATOR" content="CommunityServer 2007 (Build: 20416.853)">
+<link rel="pingback" href="http://codebetter.com/blogs/jeremy.miller/pingback.aspx">
+<link rel="shortcut icon" type="image/ico" href="http://codebetter.com/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="Jeremy D. Miller -- The Shade Tree Developer (RSS 2.0)" href="http://codebetter.com/blogs/jeremy.miller/rss.aspx">
+<link rel="alternate" type="application/atom+xml" title="Jeremy D. Miller -- The Shade Tree Developer (Atom 1.0)" href="http://codebetter.com/blogs/jeremy.miller/atom.aspx">
+<link rel="alternate" type="application/rss+xml" title="Jeremy D. Miller -- The Shade Tree Developer - All Comments (RSS 2.0)" href="http://codebetter.com/blogs/jeremy.miller/rsscomments.aspx">
+<link rel="alternate" type="application/rss+xml" title="Our “Opinions” on the ASP.NET MVC (Introducing the Thunderdome Principle) - Comments for this post (RSS 2.0)" href="http://codebetter.com/blogs/jeremy.miller/rsscomments.aspx?PostID=184224">
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Jeremy_Opinions_MVC_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-531207-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+	  <link rel="alternate" type="application/rss+xml" title="CodeBetter.Com (RSS 2.0)" href="http://codebetter.com/blogs/mainfeed.aspx">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <style type="text/css"> body { font-size: 84%; } </style>
+            <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/Common.css" type="text/css" media="screen">           
+            <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/common_print.css" type="text/css" media="print">
+            <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/SyntaxHighlighter_002.css" type="text/css" media="screen">	
+            
+    
+	<link rel="stylesheet" href="Jeremy_Opinions_MVC_files/Blog.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="Jeremy_Opinions_MVC_files/blog_print.css" type="text/css" media="print">
+	
+    <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/DynamicStyle.xml" type="text/css" media="screen">
+    <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/codebetterpoststyle.css" type="text/css" media="screen">	
+    <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/SyntaxHighlighter.css" type="text/css" media="screen">	
+    
+
+
+            <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/DynamicStyle.css" type="text/css" media="screen">
+            <link rel="stylesheet" href="Jeremy_Opinions_MVC_files/codebetter.css" type="text/css" media="screen"><!--[if lte IE 6]>
+            <link rel="stylesheet" href="/themes/default/style/alpha.css" type="text/css" media="screen" />
+        <![endif]--><title>Our “Opinions” on the ASP.NET MVC (Introducing the Thunderdome Principle) - Jeremy D. Miller -- The Shade Tree Developer</title><style>#adzerk_ad { float: left; margin-right: 10px;} #adzerk_ad_div { width: 270px; } #adzerk { margin-top: 5px; width: 140px; text-align: left; } #adzerk_by { margin-top: 10px; font-size: 10px; font-family: Verdana; }</style></head><body>
+    <form name="aspnetForm" method="post" action="/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTk3MDYwMzg1ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgU2Y3RsMDAkY3RsMDAkY3RsMDAkU2VhcmNoRm9ybTEkY3RsMDAkVGl0bGVCYXJTZWFyY2hUZXh0BUFjdGwwMCRjdGwwMCRjdGwwMCRiY3IkYmNyJGJjciRjdGwxNCRjdGwwMiRjdGwwMiRjdGwwMiRjaGtSZW1lbWJlcjsHorPXN61GfS9IaG5RXIQHbdtA" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="Jeremy_Opinions_MVC_files/WebResource_002.js" type="text/javascript"></script>
+
+
+<script src="Jeremy_Opinions_MVC_files/WebResource.axd" type="text/javascript"></script>
+<script src="Jeremy_Opinions_MVC_files/WebResource_002.axd" type="text/javascript"></script>
+<script src="Jeremy_Opinions_MVC_files/WebResource_004.axd" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+        <!--   
+            function ValidateCaptcha(val, args) {
+              
+                var value = args.Value;
+                var nameEQ = "CAPTCHA=";
+                var captchaNumbers;        	
+                var ca = document.cookie.split(';');
+                
+                for(var i=0;i < ca.length;i++) {
+    	            var c = ca[i];
+    	            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    	            if (c.indexOf(nameEQ) == 0) captchaNumbers =  c.substring(nameEQ.length,c.length);
+	            }
+
+                args.IsValid = captchaNumbers == value;
+
+            }
+        -->
+        </script>
+
+        
+<script src="Jeremy_Opinions_MVC_files/WebResource.js" type="text/javascript"></script>
+<script src="Jeremy_Opinions_MVC_files/WebResource_003.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+        <div class="cb_container">
+            <div class="cb_main">
+                <div class="cb_header">
+                    <div class="cb_header_left">
+                        <a href="http://codebetter.com/"><img src="Jeremy_Opinions_MVC_files/headerlogo.jpg" id="ctl00_ctl00_ctl00_ctl09" alt="CodeBetter.Com" border="0" height="77" width="320"></a></div>
+                    <div class="cb_header_right">
+                        <div class="cb_welcome">
+                        
+        <a href="http://codebetter.com/login.aspx?ReturnUrl=%2fblogs%2fjeremy.miller%2farchive%2f2008%2f10%2f23%2four-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx">Sign in </a>
+         | <a href="http://codebetter.com/user/CreateUser.aspx?ReturnUrl=">Join</a>
+        | <a href="http://communityserver.org/r.ashx?K">Help</a>
+     
+
+
+                        </div>
+                        <div class="CommonTabBar">
+
+                            <script type="text/javascript">
+                                // <![CDATA[
+                                    function tabOver(e)
+                                    {
+                                        if (e.className!='CommonSimpleTabStripSelectedTab')
+                                            e.className='CommonSimpleTabStripTabHover';
+                                    }
+                                    function tabOut(e)
+                                    {
+                                        if (e.className!='CommonSimpleTabStripSelectedTab')
+                                            e.className='CommonSimpleTabStripTab';
+                                    }
+                                // ]]>
+                            </script>
+
+                                <headertemplate>
+                                    </headertemplate><itemtemplate>
+                                    
+                                    
+                                </itemtemplate>
+                                <footertemplate>
+                                    </footertemplate><table border="0" cellpadding="0" cellspacing="0">
+                                        <tbody><tr valign="middle">
+                                
+                                </tr></tbody></table>
+                            
+                    
+                        </div>
+                        
+                        <div class="cb_search">
+                        
+                                <input name="ctl00$ctl00$ctl00$SearchForm1$ctl00$TitleBarSearchText" maxlength="64" size="15" id="ctl00_ctl00_ctl00_SearchForm1_ctl00_TitleBarSearchText" onclick="if(this.defaultValue==this.value) this.value='';" onblur="if(this.value=='') this.value=this.defaultValue;" onkeydown="KeyDownHandlerctl00_ctl00_ctl00_SearchForm1_ctl00_TitleBarSearchButton(event);" type="text">
+                                
+                                         in 
+                                        <select name="ctl00$ctl00$ctl00$SearchForm1$ctl00$PlaceHolder1$ctl01$TitleBarSearchDropDownList" id="ctl00_ctl00_ctl00_SearchForm1_ctl00_PlaceHolder1_ctl01_TitleBarSearchDropDownList">
+	<option value="S:127">Jeremy D. Miller -- The Shade Tree Developer (blog)</option>
+	<option value="G:2">CodeBetter.Com Blogs (group)</option>
+	<option value=":">(Entire Site)</option>
+
+</select>
+                                    
+                                <a id="ctl00_ctl00_ctl00_SearchForm1_ctl00_TitleBarSearchButton" href="javascript:__doPostBack('ctl00$ctl00$ctl00$SearchForm1$ctl00$TitleBarSearchButton','')">Search</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                    <div class="cb_content_header">
+                      <div class="cb_content_header_left">
+                        <img src="Jeremy_Opinions_MVC_files/logobottom.jpg" id="ctl00_ctl00_ctl00_Img1" alt="CodeBetter.Com" class="cb_left_image">
+                       </div>
+                       <div class="cb_content_header_right">
+                        
+    
+<div class="rssHeader"><a href="http://feeds.feedburner.com/CodeBetter" class="rssLinkStyle" mce_href="http://feeds.feedburner.com/CodeBetter"><img src="Jeremy_Opinions_MVC_files/feed-button-32x32.png" class="rssLinkImageStyle" mce_src="/feed-button-32x32.png" alt="RSS 2.0 via Feedburner" title="Rss 2.0 via FEED" border="0"></a>
+<a href="http://feeds.feedburner.com/CodeBetter"><img src="Jeremy_Opinions_MVC_files/CodeBetter.gif" style="border: 0pt none ;" alt="" height="26" width="88"></a></div>
+<div id="profilebird">
+<img src="Jeremy_Opinions_MVC_files/profile_bird.png" id="profilebirdimg" border="0" height="48" width="48">
+</div>
+<div id="profilebox">
+  	<div id="profiletext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do you Twitter? Follow us <a href="http://twitter.com/codebetter/">@CodeBetter</a>
+</div>
+	</div>
+
+
+
+                       </div>
+                    </div>
+                <div class="cb_content">
+                    <div class="cb_content_main">
+                        <div class="cb_content_main_left">
+                            
+                            
+    
+    <div class="CommonContentArea">
+        <div class="CommonContent"><div class="cb_blog_avatar"><img id="ctl00_ctl00_ctl00_bcr_bcr_UserAvatar1_ctl01_ctl01" src="Jeremy_Opinions_MVC_files/avatar.jpg" alt="" style="border-width: 0px; max-height: 80px; max-width: 80px;"></div>
+          <h1 class="CommonTitle"><a href="http://codebetter.com/blogs/jeremy.miller/default.aspx">Jeremy D. Miller -- The Shade Tree Developer</a></h1>
+          Under the hood and working with .Net, TDD, Software Design, and Agile Stuff
+
+
+          
+    <div class="BlogPostArea None">
+    	<div><!--/* Openads Javascript Tag v2.4.3 */-->
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=5&amp;target=_blank");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_003.js"></script><a href="http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=29__zoneid=5__cb=c19051e0d5__maxdest=http://www.red-gate.com/products/ants_profiler/performance_profiling_reinvented_timeline.htm?utm_source=cb&amp;utm_medium=box&amp;utm_content=timeline&amp;utm_campaign=antsprofiler" target="_blank"><img src="Jeremy_Opinions_MVC_files/ants_aug_01_ppr_02_300x250_2.gif" alt="" title="" border="0" height="250" width="300"></a><div id="beacon_29" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_008.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=a1f0104a&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=5&amp;n=a1f0104a'
+border='0' alt='' /></a></noscript></div>
+	    <br>
+	    <h4 class="BlogPostHeader">Our “Opinions” on the ASP.NET MVC (Introducing the Thunderdome Principle) </h4>
+	    <div class="BlogPostContent">
+		    <p>I’ve got my asbestos underwear on, so flame away…</p>  <p>&nbsp;</p>  <p>So
+many of us are so thrilled at seeing an official Front Controller / MVC
+framework for ASP.NET development that I think we’ve forgotten to ask
+ourselves “Is this thing any good?”&nbsp; In *my* opinion, if you look
+at the ASP.NET MVC framework as a complete framework to be used out of
+the box, the MVC framework isn’t very good at all.&nbsp; However, as a
+set of fairly loosely coupled classes that you can use to build a
+highly productive, specialized MVC stack for your specific application
+needs, the ASP.NET MVC framework is perfectly fine.</p>  <p>Basically,
+my issue with the MVC framework is that I think it falls far short of
+Ruby on Rails in terms of productivity enhancing features and
+testability.&nbsp; Specifically, I think the MVC framework – out of the
+box – has failed by not embracing the Rails mantras of <a href="https://gettingreal.37signals.com/ch04_Make_Opinionated_Software.php">Opinionated Software</a>, <a href="http://en.wikipedia.org/wiki/Convention_over_Configuration">Convention over Configuration</a>, the&nbsp; <a href="http://www.slepi.net/entry/design_principles_in_ruby_on_rails/">DRY Principle</a>,
+and Testability support.&nbsp; That’s okay though, because we’ve found
+it relatively simple to cherry pick the pieces of the MVC that we
+wanted (routing, some of the ActionResult classes, and the
+WebFormsEngine) to form the core of the MVC framework that we
+wanted.&nbsp; After deciding that we would use the MVC framework (why
+we chose the MVC over Rails and MonoRail is a different discussion), <a href="http://www.lostechies.com/blogs/chad_myers/">Chad</a>
+&amp; I immediately proceeded to develop a set of “opinions” on how we
+wanted our architecture to work and built up some infrastructure around
+the MVC to make these “opinions” become true.&nbsp; We’re doing a joint
+presentation at KaizenConf called <a href="http://codebetter.com/blogs/david_laribee/archive/2008/10/22/presenting-the-kaizenconf-workshops.aspx">Using and Abusing ASP.NET for Fun and Profit</a>
+that’s all about our particular usage of the ASP.NET MVC
+framework.&nbsp; As a preview of that talk, and for those of you who
+won’t be in Austin for KaizenConf, here are the “opinions” that we’ve
+adopted.</p>  <p>Our guiding principles have been heavily influenced by
+Rails.&nbsp; We’re using Convention over Configuration as much as
+possible, and we’re adamant about DRY.&nbsp; We’ve deviated from Rails
+by trying to use the strengths of C# 3.0 rather than trying to make C#
+act like a half-assed version of Ruby.&nbsp; To that end, we very
+heavily use Expression’s, Lambda’s, Object Initializers, and Generics. </p>  <p><b></b></p>  <p><b>Opinions</b></p>  <p><b></b></p>  <p><b></b></p>  <p><b></b></p>  <p><b></b></p>  <ul>   <li>The
+“Thunderdome Principle” – All Controller methods take in one ViewModel
+object (or zero objects in some cases) and return a single ViewModel
+object (one object enters, one object leaves).&nbsp; The Controller
+classes will NEVER be directly exposed to anything related to
+HttpContext.&nbsp; Nothing makes me cry like seeing people trying to
+write tests that mock or stub that new IHttpContextWrapper
+interface.&nbsp; Likewise, Controller methods do not return ViewResult
+objects and are generally decoupled from all MVC infrastructure.&nbsp;
+We adopted this strategy very early on as a way to make Controller
+testing simpler mechanically.&nbsp; It’s definitely achieved that goal,
+but it’s also made the Controller code very streamlined and easy to
+read.&nbsp; We’ll explain how this works at KaizenConf.</li>    <li>Controllers
+should have no knowledge of the View.&nbsp; View’s should have no
+knowledge of the Controller.&nbsp; They only share the Model class,
+period.</li>    <li>Controllers should be thin.&nbsp; The only job of a
+Controller action is to translate the model coming in to the proper
+service calls and to create the output model object.&nbsp; All
+responsibilities for business logic are done by delegating to non-UI
+service classes.&nbsp; In other words, business logic does NOT go into
+a Controller.</li>    <li>No slinging around HashTable’s,
+IDictionary’s, or magic strings.&nbsp; All of these things are error
+prone and make development harder than strongly typed parameter
+objects.&nbsp; Instead, we…</li>    <ul>     <li>…say that all
+navigation is done by an Expression like:&nbsp; &lt;%=
+this.LinkToAction&lt;HomeController&gt;(c=&gt;c.Index(),
+UserMessageKeys.MAIN_HEADER_TEXT) %&gt;.&nbsp; The actual
+implementation is half convention, and half configuration of controller
+“aliases.”&nbsp; This choice does <b>not</b> lock you into making all url strings an exact representation of the controller name and method name.</li>      <li>…as I said earlier, all Controller actions are invoked by passing in a single parameter object</li>      <li>…allow
+no direct access to HttpContext collections.&nbsp; In the very rare
+case we need to access something in HttpContext, we use a wrapper
+interface that expresses that need in terms of our application.&nbsp;
+Dependency Injection is used to get the HttpContext wrappers to the
+Controller classes that need them.&nbsp; See <a href="http://www.lostechies.com/blogs/jimmy_bogard/archive/2008/06/24/separation-of-concerns-by-example-part-2.aspx">this post from Jimmy Bogard</a> for another example.</li>   </ul>    <li>All
+View’s are strongly typed View’s (ViewPage&lt;T&gt;, where T is the
+ViewModel that comes out of a Controller action).&nbsp; This is
+somewhat necessary because of the Thunderdome principle, and also
+enables the bullet point below…</li>    <li>All html form elements are
+built by Expressions with our own html helpers like this:&nbsp; &lt;%=
+this.TextBoxFor(m =&gt; m.Site.Identifier)%&gt;.&nbsp; This has worked
+out very well because:</li>    <ul>     <li>It makes screen
+synchronization simpler by binding the element names to the actual
+properties of the Model object.&nbsp; With a little code generation,
+we’ve basically made the effort to synchronize data between the view,
+the Request.Form, and the internal Domain Model objects a miniscule
+part of the development effort. </li>      <li>This cuts down on mistakes from misnamed elements or mangled string key values on the server side</li>      <li>It’s
+enabled automated testing of the screens.&nbsp; We can address screen
+elements in tests by a strong typed Expression as:&nbsp; DropDownFor(x
+=&gt; x.Site.Status).HasOptionValues(Given.StatusList);</li>      <li>We
+have access to the underlying PropertyInfo while we’re building
+textbox’s and dropdown’s and the like.&nbsp; We’re just starting to
+take advantage of this to intelligently set restrictions on what type’s
+are valid in the html elements.&nbsp; We’re also tying into our
+validation attributes to automatically mark fields that are required
+and set some client side validation rules on the html elements.&nbsp;
+Sooner or later, we’ll also tie in tooltip values into the html
+controls.&nbsp; And all of this comes without adding any more code on
+the actual View.&nbsp; </li>   </ul>    <li>Server side markup is
+never intermingled with client side JavaScript.&nbsp; It is our opinion
+that this all too common technique leads to unreadable code and
+eliminates the ability to TDD the client side JavaScript.&nbsp;
+This:&nbsp; callFunction(‘&lt;%=Model.Variable%&gt;’) is not
+allowed.&nbsp; If server side data needs to be passed to client side
+JavaScript, we do that by writing “var something = &lt;%
+=Model.Variable%&gt;.”&nbsp; </li>    <li>View’s should be very
+simple.&nbsp; If you’re using an if/then statement or some sort of
+looping expression, you’re doing something wrong.&nbsp; Conditional
+logic belongs in the Controller or in JavaScript libraries that can be
+tested with QUnit.&nbsp; No, or minimal, logic in the View’s reduces
+errors by moving logic out of hard to test code and into easier to test
+code – and yes, I’m declaring that JavaScript is easy to unit
+test.&nbsp; <a href="http://blog.wekeroad.com/blog/asp-net-mvc-avoiding-tag-soup/">Tag Soup</a>
+can be avoided.&nbsp; We tend to move looping constructs into our own
+partial implementation like:&nbsp; &lt;%= this.RenderPartialForEachOf(m
+=&gt; m.Solution.Resolutions).Using&lt;EditResolution&gt;()%&gt;.&nbsp;
+In that block of code, EditResolution refers to an ASCX control, and
+m.Solutution.Resolutions is a property of type
+IList&lt;Resolution&gt;.&nbsp; This statement will iterate over the
+list, and render a partial view for each Resolution object.</li>    <li>All
+Domain Model classes are identified by a single numeric property called
+“Id” (enforced with a layer supertype).&nbsp; Nothing uncommon about
+that opinion, but it does eliminate repetition in the code by allowing
+us to reuse a lot of code for finding objects and Url routing between
+different types of Domain Model objects.&nbsp; </li> </ul>  <p>&nbsp;</p>  <p><b>Other Stuff We’re Doing</b></p>  <ul>   <li>We
+use QUnit quite extensively and I’m thrilled with it as a tool.&nbsp;
+We try to treat our JavaScript work as “real” coding and apply the same
+quality requirements to JavaScript as our C# code, and that means
+TDD.&nbsp; We’ve found that many things are easier to unit test and
+build with jQuery / QUnit rather than server side markup and NUnit. </li>    <li>We
+do have a way to test View’s in isolation with WatiN.&nbsp; We can set
+up the input Model class in memory, then render that Model with a View
+and make assertions on how the View was rendered.&nbsp; Rails has
+support for this very thing, and I’ve always wanted this ability.&nbsp;
+This hasn’t been as useful as I thought it was going to be once we
+adopted the rules about simplicity in the View’s and started using the
+QUnit / jQuery combination.&nbsp; In order to make this ViewContext
+work, however, we had to forgo all usage of the built in HtmlHelper’s
+because of some unfortunate coupling to HttpContext.</li>    <li>We’re
+using Fluent NHibernate for configuration.&nbsp; We’re about to remove
+some of the explicit configuration in favor of the convention based
+mapping.&nbsp; At this point, we’re completely generating the database
+with NHibernate’s HBM2DDL tooling.&nbsp; The database is just flowing
+out of the Domain Model for the time being (until we have a need to
+optimize the default DDL).&nbsp; We have added some conventions to
+Fluent NHibernate to tie our validation attributes into the DDL
+generation.&nbsp; DRY baby.&nbsp; The lesson we can take out of Rails
+success is DRY.&nbsp; It’s just that the shape of DRY code is a bit
+different in the .Net world.</li>    <li>We have a custom BDD style
+“Context” abstract class for our Controller actions.&nbsp; Because of
+the “Thunderdome Principle,” it’s simply a matter of defining the input
+model, running the method, then doing state-based assertions against
+the output model.&nbsp; No HttpContext.Request.Form setup, and no
+scraping data out of a weakly typed ViewResult after the fact.&nbsp;
+This “Context” class also uses the StructureMap AutoMocker behind the
+scenes to cut down on the overhead of setting up tests.&nbsp; Here’s an
+example of that context in action testing a service class:</li> </ul>  <div style="border: thin solid black; background: white none repeat scroll 0%; font-size: 10pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: black; font-family: courier new;">   <p style="margin: 0px;"><span style="overflow: scroll;">[</span><span style="overflow: scroll;">TestFixture</span><span style="overflow: scroll;">]</span></p>    <p style="margin: 0px;"><span style="overflow: scroll; color: blue;">public</span><span style="overflow: scroll;"> </span><span style="overflow: scroll; color: blue;">class</span><span style="overflow: scroll;"> </span><span style="overflow: scroll;">When_yanking_a_workflow_item</span><span style="overflow: scroll;"> : </span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll;">ActionContext</span><span style="overflow: scroll;">&lt;</span><span style="overflow: scroll;">WorkflowService</span><span style="overflow: scroll;">, </span><span style="overflow: scroll;">YankRequest</span><span style="overflow: scroll;">, </span><span style="overflow: scroll;">WorkflowActionResult</span><span style="overflow: scroll;">&gt;</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">{</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: blue;">private</span><span style="overflow: scroll;"> </span><span style="overflow: scroll;">User</span><span style="overflow: scroll;"> theCurrentUser;</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: blue;">private</span><span style="overflow: scroll;"> </span><span style="overflow: scroll;">Queue</span><span style="overflow: scroll;"> theOriginalQueue;</span></p>    <p style="margin: 0px;">&nbsp;</p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="overflow: scroll; color: green;">// Defines the method</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: blue;">public</span><span style="overflow: scroll;"> When_yanking_a_workflow_item() : </span><span style="overflow: scroll; color: blue;">base</span><span style="overflow: scroll;">( (x, input) =&gt; x.Yank(input))</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; {</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UseInMemoryRepository = </span><span style="overflow: scroll; color: blue;">true</span><span style="overflow: scroll;">;</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; }</span></p>    <p style="margin: 0px;">&nbsp;</p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: green;">// Set up the context</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: blue;">protected</span><span style="overflow: scroll;"> </span><span style="overflow: scroll; color: blue;">override</span><span style="overflow: scroll;"> </span><span style="overflow: scroll; color: blue;">void</span><span style="overflow: scroll;"> beforeEach()</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; {</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; theCurrentUser = </span><span style="overflow: scroll; color: blue;">new</span><span style="overflow: scroll;"> </span><span style="overflow: scroll;">User</span><span style="overflow: scroll;">().WithId(4);</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll;">WorkflowItem</span><span style="overflow: scroll;"> theCase = </span><span style="overflow: scroll; color: blue;">new</span><span style="overflow: scroll;"> </span><span style="overflow: scroll;">Case</span><span style="overflow: scroll;">().WithId(1);</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; theOriginalQueue = </span><span style="overflow: scroll; color: blue;">new</span><span style="overflow: scroll;"> </span><span style="overflow: scroll;">Queue</span><span style="overflow: scroll;">{Name=</span><span style="overflow: scroll;">"OriginalQ"</span><span style="overflow: scroll;">}.WithId(5);</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; theCase.Enqueue(theOriginalQueue);</span></p>    <p style="margin: 0px;">&nbsp;</p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: green;">// Setup the input model</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given = </span><span style="overflow: scroll; color: blue;">new</span><span style="overflow: scroll;"> </span><span style="overflow: scroll;">YankRequest</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CurrentUser = </span><span style="overflow: scroll; color: blue;">this</span><span style="overflow: scroll;">.theCurrentUser,</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Item = theCase</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; }</span></p>    <p style="margin: 0px;">&nbsp;</p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; [</span><span style="overflow: scroll;">Test</span><span style="overflow: scroll;">]</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: blue;">public</span><span style="overflow: scroll;"> </span><span style="overflow: scroll; color: blue;">void</span><span style="overflow: scroll;"> the_owner_should_be_changed_to_the_current_user()</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; {</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: green;">// The first access of the "Output" property</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: green;">// runs the Controller action and caches the return</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: green;">// value of the Controller action</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output.Item.Owner.ShouldBeTheSameAs(Given.CurrentUser);</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; }</span></p>    <p style="margin: 0px;">&nbsp;</p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; [</span><span style="overflow: scroll;">Test</span><span style="overflow: scroll;">]</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: blue;">public</span><span style="overflow: scroll;"> </span><span style="overflow: scroll; color: blue;">void</span><span style="overflow: scroll;"> it_should_no_longer_be_assigned_to_a_queue()</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; {</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output.Item.Queue.ShouldBeNull();</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; }</span></p>    <p style="margin: 0px;">&nbsp; </p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; [</span><span style="overflow: scroll;">Test</span><span style="overflow: scroll;">]</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; </span><span style="overflow: scroll; color: blue;">public</span><span style="overflow: scroll;"> </span><span style="overflow: scroll; color: blue;">void</span><span style="overflow: scroll;"> the_item_and_the_queue_and_the_log_should_be_saved()</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; {</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TheLastTransactionWasCommitted()</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.TheSavedObjectsWere(Output.Item, theOriginalQueue,
+Output.Item.LastAction);</span></p>    <p style="margin: 0px;"><span style="overflow: scroll;">&nbsp;&nbsp;&nbsp; }</span></p>    <p style="margin: 0px;">     </p><p style="margin: 0px;"><span style="overflow: scroll;"></span></p>     <span style="overflow: scroll;">}</span> </div>  <p>&nbsp;</p>  <p><b>In Closing</b></p>  <p>Please
+don’t think that I’m saying that the ASP.NET MVC is bad, because it’s
+not.&nbsp; I just think that the MVC out of the box is too “bland” and
+wishy washy.&nbsp; If you’re going to use it for anything bigger than a
+handful of screens, I’d highly advise you to add some of your own
+application specific sauce.&nbsp; I think we can agree that Microsoft
+couldn’t make the MVC framework opinionated without pissing off 3/4’s
+of its users (just think, if they were to build in direct support for
+persistence they’d have to use Linq to SQL or the messy tool that shall
+not be named, neither of which I would consider to be
+acceptable).&nbsp; Making the MVC opinionated, and hence more
+productive, is going to be left to the community and to each
+organization. </p><div><a href="http://www.dotnetkicks.com/kick/?url=http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx"><img src="Jeremy_Opinions_MVC_files/KickItImageGenerator.png" border="0"></a></div>
+		    
+	    </div>
+       	<br><div style="margin-left: 4px; margin-bottom: 4px;">
+<!--/* Openads Javascript Tag v2.4.3 */-->
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=4&amp;target=_blank");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_005.js"></script><a href="http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=3__zoneid=4__cb=d40618778c__maxdest=http://www.red-gate.com/products/SQL_Compare/index.htm?utm_source=cb&amp;utm_medium=banner&amp;utm_campaign=sqlcompare" target="_blank"><div style="margin-left: 4px; margin-bottom: 4px;">
+<img src="Jeremy_Opinions_MVC_files/ScriptingManually_300x250.gif" mce_src="/ads/ScriptingManually_300x250.gif" border="0">
+</div></a><div id="beacon_3" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_006.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=aa6b3fda&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=4&amp;n=aa6b3fda'
+border='0' alt='' /></a></noscript>
+
+</div>
+
+	    <div class="BlogPostFooter">
+		    Published 
+		    <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx">Oct 23 2008, 03:16 PM</a>
+			by
+		    <a href="http://codebetter.com/members/jmiller.aspx">Jeremy D. Miller</a> 
+            
+            <div class="em"><span id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl11_ctl01">Filed under: <a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Design+Patterns/default.aspx" rel="tag">Design Patterns</a></span><input name="ctl00$ctl00$ctl00$bcr$bcr$bcr$ctl11$ctl01" id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl11_ctl01_State" value="value:Filed%20under%3A%20%3Ca%20href%3D%22%2Fblogs%2Fjeremy.miller%2Farchive%2Ftags%2FDesign%2BPatterns%2Fdefault.aspx%22%20rel%3D%22tag%22%3EDesign%20Patterns%3C%2Fa%3E" type="hidden"></div>
+		    	
+        </div>                            
+         
+	        <br>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2785396000675099";
+google_ad_width = 468;
+google_ad_height = 15;
+google_ad_format = "468x15_0ads_al_s";
+//2007-04-19: Codebetter Links
+google_ad_channel = "3628097916";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "4C4C4C";
+google_color_text = "333333";
+google_color_url = "666666";
+//-->
+</script>
+<script type="text/javascript" src="Jeremy_Opinions_MVC_files/show_ads.js">
+</script><script> window.google_render_ad(); </script><iframe name="google_ads_frame" src="Jeremy_Opinions_MVC_files/ads.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="15" scrolling="no" width="468"></iframe>
+    	    
+    </div>
+
+    
+            
+                    <div id="comments">
+                    <a name="Comments">
+                    </a><h2><a name="Comments">Comments</a></h2>
+<a name="Comments">                
+                    </a><div class="CommentArea">
+<a name="Comments">			            </a><h4 class="CommentTitle">
+<a name="Comments">				            </a><a title="Kevin Dente" rel="nofollow" href="http://weblogs.asp.net/kdente">Kevin Dente</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl02_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Nice.
+I agree that a more convention-based approach is hugely valuable, and
+will be up to the community to build on top of the base framework. Any
+plans to open-source any of those MVC pieces (beyond Fluent NHibernate,
+which I know is already open source)?</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184225">#</a>
+			                October 23, 2008 3:32 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentAreaOwner">
+			            <h4 class="CommentTitle">
+				            <a title="Jeremy D. Miller" href="http://codebetter.com/blogs/jeremy.miller">Jeremy D. Miller</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl03_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Kevin,</p>
+<p>We've thought about doing that, but it won't happen before next
+year. &nbsp;Gotta get permission first, which I'm confident that we
+will.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184227">#</a>
+			                October 23, 2008 3:46 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Steve" rel="nofollow" href="http://iqueryable.com/">Steve</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl04_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>It'd
+be interesting if Microsoft (or the community) took the approach that
+Merb is taking. &nbsp;They make the core of Merb pretty bland, but they
+also have Merb Stack which takes all their opinions about the best way
+to build web apps and makes it very easy to install and use. &nbsp;This
+gives those who want to swap shit out the option to do so, while also
+making a stack that is opinionated and productive right from the start.
+&nbsp;Additionally allowing people to build their own "Stack" allows
+&nbsp;communities to form around particular approaches ("Stacks") that
+are optimized for how those in that community work/think.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184228">#</a>
+			                October 23, 2008 3:46 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Paul Batum" rel="nofollow" href="http://paulbatum.blogspot.com/">Paul Batum</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl05_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Really
+interesting stuff Jeremy. I am desperately hoping that your kaizenconf
+presentation (along with several others) will be recorded.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184229">#</a>
+			                October 23, 2008 3:51 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentAreaOwner">
+			            <h4 class="CommentTitle">
+				            <a title="Jeremy D. Miller" href="http://codebetter.com/blogs/jeremy.miller">Jeremy D. Miller</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl06_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Paul,</p>
+<p>We're going to try to record as much as possible. &nbsp;I don't know
+how well our session will translate to video since we're going to go
+very informal, but we'll try.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184230">#</a>
+			                October 23, 2008 3:52 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Haacked" rel="nofollow" href="http://haacked.com/">Haacked</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl07_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Merb
+is one of the many influences on our thinking. In part, you can look at
+v1 of ASP.NET MVC as a Framework for building ASP.NET MVC Frameworks. I
+do think it's complete enough out of the box for many, if not most, web
+apps.</p>
+<p>While we haven't made it opinionated in the extreme (ViewPage and
+ViewPage&lt;T&gt; comes to mind), I don't think we've been extremely
+wishy washy. We do have our opinions and it shows in MVC. I think we
+just disagree on some of those opinions, which is fine, as that's the
+whole point of opinionated software.</p>
+<p>Case in point, we made the strong opinion that actions are decoupled
+from methods. An action name does not necessarily represent the name of
+a method. Thus we don't include strongly typed helper methods such as
+ActionLink&lt;T&gt;. This has made a lot of people upset, true, but
+we've held to our opinion in this case.</p>
+<p>However, as you've pointed out, it's very easy to build a stack on
+top of ASP.NET MVC such that ActionLink&lt;T&gt; works because you
+won't (ostensibly) do anything that would make it not work (such as
+tinker with certain extensibility points that would break that).</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184231">#</a>
+			                October 23, 2008 3:58 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Joshua Flanagan" rel="nofollow" href="http://joshuaflanagan.lostechies.com/">Joshua Flanagan</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl08_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Haacked
+- I am not of the opinion that your example of an opinion is the same
+as my idea of an opinion when it comes to opinionated software. ;)</p>
+<p><a rel="nofollow" target="_new" href="https://gettingreal.37signals.com/ch04_Make_Opinionated_Software.php">gettingreal.37signals.com/ch04_Make_Opinionated_Software.php</a></p>
+<p>An opinion in "opinionated software" is a deliberate constraint.
+What you describe is called a "decision". You decided to not have an
+opinion about what an action name represents.</p>
+<p>And I don't think you have to be defensive of that decision when
+building a framework. The community, (or Microsoft, as a separate
+logical package), can build the opinionated stuff on top of the
+framework.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184237">#</a>
+			                October 23, 2008 7:23 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Javier Lozano" rel="nofollow" href="http://blog.lozanotek.com/">Javier Lozano</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl09_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Great post, Jeremy! I love the "Thunderdome Principle", great way on expressing the point in a way people can understand.</p>
+<p>I'm a little confused as how you avoid if/else's in your view.
+&nbsp;Currently the only reason why I have an if/else in the view is to
+display "there is data" or "there is no &nbsp;data"...granted, I can
+have the controller return a different view with that information, but
+I felt that having two views was a bit too much overkill for what I'm
+doing. &nbsp;I'm really interested to see how you solved the problem
+since although my solution works, it is still pretty clunkly.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184240">#</a>
+			                October 23, 2008 8:10 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentAreaOwner">
+			            <h4 class="CommentTitle">
+				            <a title="Jeremy D. Miller" href="http://codebetter.com/blogs/jeremy.miller">Jeremy D. Miller</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl10_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Javier,</p>
+<p>It's just a little sleight of hand. &nbsp;If we have something like that, it would be:</p>
+<p>&lt;% =RenderPartialFor(x =&gt; x.PartOfTheViewModel).With&lt;ThePartialView&gt;() %&gt;</p>
+<p>If the "PartOfTheViewModel" doesn't exist, we simply don't call through to the actual partial rendering.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184241">#</a>
+			                October 23, 2008 8:32 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            Steve
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl11_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Must
+be a good framework if you can make it do for you what you need done.
+&nbsp;I expect them to build generic frameworks that are highly
+extensible.</p>
+<p>Hats off to MS for a job well done so far!</p>
+<p>One question: you praise Ruby on Rails, do you have some examples you've done to show us ?</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184242">#</a>
+			                October 23, 2008 8:45 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Jonathan Carter" rel="nofollow" href="http://www.lostintangent.com/">Jonathan Carter</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl12_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Great post Jeremy. You and Chad are definitely doing a lot of cool things.</p>
+<p>I'm curious though why it is you feel that ASP.NET MVC has failed at
+embracing convention over configuration? Going by the Rails mantra (COC
+= assuming defaults), I'd think that ASP.NET MVC has embraced that very
+strongly.</p>
+<p>I agree that due to its lack of higher level opinions, you have to
+configure lots of things, but that seems to go back to the issue of it
+not being as opinionated as many would like, not an issue with it
+embracing convention over configuration at all.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184243">#</a>
+			                October 23, 2008 8:51 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentAreaOwner">
+			            <h4 class="CommentTitle">
+				            <a title="Jeremy D. Miller" href="http://codebetter.com/blogs/jeremy.miller">Jeremy D. Miller</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl13_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Jonathan,</p>
+<p>"you have to configure lots of things"</p>
+<p>That's kind of what "Convention over Configuration" eliminates from
+your application. &nbsp;I'll turn the question around on you, in what
+way do you think the MVC has embraced CoC? </p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184245">#</a>
+			                October 23, 2008 9:02 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentAreaOwner">
+			            <h4 class="CommentTitle">
+				            <a title="Jeremy D. Miller" href="http://codebetter.com/blogs/jeremy.miller">Jeremy D. Miller</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl14_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Steve,</p>
+<p>" I expect them to build generic frameworks that are highly extensible."</p>
+<p>That's kind of the argument I was trying to make. &nbsp;A "generic"
+framework is generally one that's mediocre for lots of different
+applications. &nbsp;I'm trying to say that there's quite a bit of
+advantage in making an MVC stack that's specifically optimized for the
+app at hand.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184246">#</a>
+			                October 23, 2008 9:03 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Jonathan Carter" rel="nofollow" href="http://www.lostintangent.com/">Jonathan Carter</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl15_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Jeremy</p>
+<p>Some of these are cited as examples of Rails CoC'ness in the article you linked...</p>
+<p>1) Controller/action-to-request mapping</p>
+<p>2) View/partial discovery</p>
+<p>3) HTML helper-to-viewdata mapping</p>
+<p>4) Model state</p>
+<p>5) DefaultModelBinder: automatic rehydration of complex objects</p>
+<p>6) DefaultValueProvider: automatic retrieval of action parameters for route/query string/form</p>
+<p>Don't all of those allow a developer to assume the default behavior that ASP.NET MVC feels is conventional out-of-the-box?</p>
+<p>When I mentioned that you still have to configure lots of stuff, I
+was referring to things that ASP.NET MVC as a framework isn't concerned
+with (doesn't have an opinion).</p>
+<p>Rails no doubt provides a lot stronger CoC, but only due to the fact
+that it provides a much higher-level of opinions to the user.</p>
+<p>I'm not saying that ASP.NET MVC can't get better (it's only in
+beta!), but I think it's done a good job of providing basic conventions
+for core behavior.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184247">#</a>
+			                October 23, 2008 9:31 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Javier Lozano" rel="nofollow" href="http://blog.lozanotek.com/">Javier Lozano</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl16_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Jeremy,</p>
+<p>I need to check that out...what's way cleaner.</p>
+<p>Another questions, how do you go about testing your views?</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184248">#</a>
+			                October 23, 2008 9:59 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Kees Dijk" rel="nofollow" href="http://twitter.com/KeesDijk">Kees Dijk</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl17_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Thanks Jeremy, love this article. I would realy like to see the possible recording and sources. </p>
+<p>Maybe you could put this in a screencast called "How to build a well
+designed MVC Application", so after watching these screencasts <a rel="nofollow" target="_new" href="http://www.asp.net/learn/mvc-videos/">www.asp.net/.../mvc-videos</a> people know the difference between making mvc apps work and designing mvc apps well.</p>
+<p>Just one small comment, when fighting in the thunderdome the people shout "two men enter, one man leaves." &nbsp;<a rel="nofollow" target="_new" href="http://en.wikipedia.org/wiki/Mad_Max_Beyond_Thunderdome">en.wikipedia.org/.../Mad_Max_Beyond_Thunderdome</a> </p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184254">#</a>
+			                October 24, 2008 2:26 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Torkel" rel="nofollow" href="http://www.codinginstinct.com/">Torkel</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl18_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>I would be interested to learn more on how you handle view testing in isolation using WatiN. </p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184255">#</a>
+			                October 24, 2008 2:57 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            Stephen
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl19_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>I
+like most of the points, although I'm not sure how pure you can really
+be where you were saying you can build on top of the current mvc to
+make it cleaner?</p>
+<p>Do you have your own implementation of an IController? or are you
+just ensuring you don't explicitely use HttpContext thats accessible
+via the ControllerContext / RequestContext?</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184258">#</a>
+			                October 24, 2008 4:47 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="efdee" rel="nofollow" href="http://www.filip.duyck.org/">efdee</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl20_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Great post, two small remarks though:</p>
+<p>First, I think the Thunderdome principle is "two men enter, one man
+leaves". "One man enters, one man leaves" would make for a pretty
+boring dome ;-)</p>
+<p>Second, don't you contradict yourself by first saying that your
+Views don't know about your Controllers, followed by showing an example
+of your View using a direct reference to a Controller and it's method
+when using ActionLink&lt;T&gt; ?</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184261">#</a>
+			                October 24, 2008 7:48 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            Ben
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl21_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>No slinging around a Hashtable's what?</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184262">#</a>
+			                October 24, 2008 7:51 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            Steve
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl22_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>"
+I'm trying to say that there's quite a bit of advantage in making an
+MVC stack that's specifically optimized for the app at hand."</p>
+<p>And you made one right? &nbsp;Each app is different, so as long as
+the framework allows for you to 'make it fit for you' then it's a good
+framework.</p>
+<p>perfect. &nbsp;No complaints right? &nbsp;:)</p>
+<p>Let's be real, I would suspect, and this isn't a put down, that no
+matter what someone releases, you'd be incline to mold it/push it,
+etc... into something else.</p>
+<p>And from what I hear, that is what you did. &nbsp;Maybe when your
+down you'll post your architecture on Codeplex so others can use it.</p>
+<p>Right?</p>
+<p>(I say this based on all your articles showing how you would do 'x' better - ie. CAB, now MVC, etc... I'm sure there are more)</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184263">#</a>
+			                October 24, 2008 7:54 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            Steve
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl23_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>"Controllers
+should have no knowledge of the View. &nbsp;View’s should have no
+knowledge of the Controller. &nbsp;They only share the Model class,
+period."</p>
+<p>I just implemented my own ModelBinder - this 'shielded' the
+controller from knowledge of the view/as well as no HttpContext
+required. &nbsp;(Because it was all mapped in the modelBinder).</p>
+<p>So the controller only knows about this model object that is already been 'bound' from the form.</p>
+<p>Is that what you are referring to?</p>
+<p>Thanks</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184264">#</a>
+			                October 24, 2008 8:04 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="TrackBack" rel="nofollow" href="http://www.arjansworld.com/2008/10/24/linkblog-for-october-24-2008/">Arjan`s World    » LINKBLOG for October 24, 2008</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl24_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Pingback from &nbsp;Arjan`s World &nbsp; &nbsp;&amp;raquo; LINKBLOG for October 24, 2008</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184275">#</a>
+			                October 24, 2008 9:43 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Sean Scally" rel="nofollow" href="http://anydiem.com/">Sean Scally</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl25_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>&gt;&gt; why we chose the MVC over Rails and MonoRail is a different discussion)</p>
+<p>I'm interested in hearing what the arguments were, from your perspective, on that choice. </p>
+<p>I've picked MVC over Monorail for the reason that was pointed out
+earlier -- ASPMVC is more like Merb, Monorail is more like Rails
+proper. My experimentation with Rails didn't make me too happy because
+it seems to have thrown SOLID principles out the window in favor of
+RAD. </p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184279">#</a>
+			                October 24, 2008 10:00 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="TrackBack" rel="nofollow" href="http://aspdotnetmvc.com/blogs/default.aspx">ASP.NET MVC Archived Blog Posts, Page 1</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl26_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Pingback from &nbsp;ASP.NET MVC Archived Blog Posts, Page 1</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184281">#</a>
+			                October 24, 2008 10:11 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            Bill English
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl27_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>See: <a rel="nofollow" target="_new" href="http://www.apostrophe.fsnet.co.uk/">www.apostrophe.fsnet.co.uk</a></p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184282">#</a>
+			                October 24, 2008 10:53 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="Haacked" rel="nofollow" href="http://haacked.com/">Haacked</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl28_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Joshua,
+if you read that post carefully, you notice he's talking about apps,
+not frameworks. Now I know they would apply the same reasoning to
+frameworks as well, much less so. </p>
+<p>Taking a look at the Rails framework, it chooses the language
+Ruby.Ruby allows you to monkeypatch and pretty much override
+everything. So "opinions" (expressed as a deliberate constraint) in
+such a framework are like gossamer, easily set aside. An "opinion"
+expressed in an app is not easily set aside by a user.</p>
+<p>If we wanted to get extreme about our opinions (via constraints) we
+could have made every class and method sealed. I know for a fact that
+wouldn't make Chad happy, as he's pushed for quite the opposite. ;)</p>
+<p>Jeremy, you mentioned Rais as an example. I was curious how many Rails apps have you developed and deployed to production.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184283">#</a>
+			                October 24, 2008 10:54 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentAreaOwner">
+			            <h4 class="CommentTitle">
+				            <a title="Jeremy D. Miller" href="http://codebetter.com/blogs/jeremy.miller">Jeremy D. Miller</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl29_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Stephen,</p>
+<p>Yes, we have our own base class for IController. &nbsp;That's
+relatively easy to do. &nbsp;You can look at the MvcContrib for
+examples.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184288">#</a>
+			                October 24, 2008 3:13 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentAreaOwner">
+			            <h4 class="CommentTitle">
+				            <a title="Jeremy D. Miller" href="http://codebetter.com/blogs/jeremy.miller">Jeremy D. Miller</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl30_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>@Steve,</p>
+<p>"I just implemented my own ModelBinder - this 'shielded' the
+controller from knowledge of the view/as well as no HttpContext
+required. &nbsp;(Because it was all mapped in the modelBinder)."</p>
+<p>Yep, and do the same on the back end. &nbsp;We have something else
+take the model coming out and set up the proper view with that model in
+the right place.</p>
+<p>"Let's be real, I would suspect, and this isn't a put down, that no
+matter what someone releases, you'd be incline to mold it/push it,
+etc... into something else."</p>
+<p>Sure, and I think that's generally &nbsp;a good strategy. &nbsp;The
+MVC is extremely generic and useful in lots of apps. &nbsp;We *can*
+wring out more productivity by making our own infrastructure on top, or
+around, or selectivly in place of the generic framework that is very
+specific to the application we're building. &nbsp;We wouldn't be as
+productive if we'd stayed inside the MVC idioms that you see online or
+in things like CodeCampServer. &nbsp;Yes, there was some nontrivial
+bootstrapping overhead, but I'll still claim we're better off.</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184289">#</a>
+			                October 24, 2008 3:18 PM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="TrackBack" rel="nofollow" href="http://freepressblog.org/blog/2008/10/25/gr-shared-link-our-%e2%80%9copinions%e2%80%9d-on-the-aspnet-mvc-introducing-the-thunderdome-principle/">FreePress Blog » GR Shared Link - Our ???Opinions??? on the ASP.NET MVC (Introducing the Thunderdome Principle)</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl31_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Pingback
+from &nbsp;FreePress Blog &amp;raquo; GR Shared Link - Our
+???Opinions??? on the ASP.NET MVC (Introducing the Thunderdome
+Principle)</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184322">#</a>
+			                October 26, 2008 2:02 AM
+                            
+                        </div>
+		            </div>
+                
+                    <div class="CommentArea">
+			            <h4 class="CommentTitle">
+				            <a title="TrackBack" rel="nofollow" href="http://codemonkeylabs.com/blog/weekly-web-nuggets-35/">Code Monkey Labs</a>
+				            said:
+				            <img id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl00_ctl32_ctl01" class="CommentArrow" src="Jeremy_Opinions_MVC_files/spacer.gif" alt=" " style="border-width: 0px;" align="bottom">
+			            </h4>
+			            <div class="CommentText">
+				            <div class="CommentText2">
+					            <div class="CommentText3"><p>Pick
+of the week: Demotivating a (Good) Programmer General Insidious
+Dependencies : Steve Smith writes about some obvious and not so obvious
+dependencies lurking in your supposedly loosely-coupled application.
+Embrace The New .NET Logo : Scott Barnes</p>
+</div>
+				            </div>
+			            </div>
+			            <div class="CommentFooter">
+			                <a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx#184379">#</a>
+			                October 28, 2008 9:54 AM
+                            
+                        </div>
+		            </div>
+                
+                    </div>
+                
+            
+            
+            
+            
+                     <div class="CommonFormArea">
+			            <h4 class="CommonFormTitle">Leave a Comment</h4>
+                        
+                        <div id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_NameTitle" class="CommonFormFieldName">
+                            <label for="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbName">Name</label> 
+                            <em>(required)</em>
+                            <span id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08" style="color: Red; visibility: hidden;">*</span>
+		                </div>
+	                    <div id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_NameDesc" class="CommonFormField">
+	                        <input name="ctl00$ctl00$ctl00$bcr$bcr$bcr$ctl14$ctl02$ctl02$ctl02$tbName" size="60" id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbName" type="text">
+	                    </div>
+	                    
+	                    <div class="CommonFormFieldName">
+	                         <label for="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbUrl">Your URL</label>
+	                         <em>(optional)</em>
+		                </div>
+	                    <div class="CommonFormField">
+	                        <input name="ctl00$ctl00$ctl00$bcr$bcr$bcr$ctl14$ctl02$ctl02$ctl02$tbUrl" size="60" id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbUrl" type="text">
+	                     </div>
+	                        
+	                     <div class="CommonFormFieldName">
+	                        <label for="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbComment">Comments</label>
+	                        <em>(required)</em>
+	                        <span id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05" style="color: Red; visibility: hidden;">*</span>
+		                 </div>
+		                 <div class="CommonFormField">
+		                    <textarea name="ctl00$ctl00$ctl00$bcr$bcr$bcr$ctl14$ctl02$ctl02$ctl02$tbComment" rows="8" cols="60" id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbComment"></textarea>
+		                 </div>
+
+                         <div id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_Remember" class="CommonFormField">
+                            <input id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_chkRemember" name="ctl00$ctl00$ctl00$bcr$bcr$bcr$ctl14$ctl02$ctl02$ctl02$chkRemember" type="checkbox"><label for="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_chkRemember">Remember Me?</label>
+                         </div>
+                         
+                         <div class="CommonFormField">
+	                        <div id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_CaptchaPanel" class="Captcha_Div">
+	<img src="Jeremy_Opinions_MVC_files/captcha.jpg" style="border-width: 0px;"><br><span>Enter the numbers above:</span><input name="ctl00$ctl00$ctl00$bcr$bcr$bcr$ctl14$ctl02$ctl02$ctl02$CaptchaTextBox" size="3" id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_CaptchaTextBox" type="text"><span id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32" style="color: Red; display: none;">*</span>
+</div><a id="ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_btnSubmit" class="CommonTextButton" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ctl00$bcr$bcr$bcr$ctl14$ctl02$ctl02$ctl02$btnSubmit", "", true, "CreateCommentForm", "", false, true))'>Add</a>
+                         </div>
+                    </div>
+                
+    
+            
+                    <h2 class="CommonSubTitle">About Jeremy D. Miller</h2>
+Jeremy began his IT career writing "Shadow IT" applications to automate
+his engineering documentation, then wandered into software development
+because it looked like more fun. Jeremy previously worked as a systems
+architect building mission critical supply chain software for a Fortune
+100 company and learned agile development practices as a .Net
+consultant at ThoughtWorks, one of the pioneers of agile development.
+Jeremy is the author of the open source StructureMap
+(http://structuremap.sourceforge.net) tool for Dependency Injection
+with .Net and the forthcoming StoryTeller
+(http://storyteller.tigris.org) tool for supercharged FIT testing in
+.Net. Jeremy's thoughts on just about everything software related can
+be found on his weblog "The Shade Tree Developer" at
+http://codebetter.com/blogs/jeremy.miller, part of the popular
+CodeBetter site. Jeremy is a Microsoft MVP for C#. <a href="http://feeds.feedburner.com/%7Er/Devlicious/%7E6/1"><img src="Jeremy_Opinions_MVC_files/Devlicious.gif" alt="Check out Devlicio.us!" style="border: 0pt none ;"></a>
+
+        </div>
+    </div>
+
+
+                        </div>
+                        <div class="cb_content_main_right">
+                
+      
+                       	    <div class="sponsors">
+			                <!-- begin sidebar header -->
+                    <div class="CommonSidebarArea">
+                    <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                    <div class="CommonSidebarInnerArea">
+	                    <h4 class="CommonSidebarHeader">Our Sponsors</h4>
+		                <div class="CommonSidebarContent">                   
+		                <!-- end sidebar header -->
+
+<!--/* Openads Javascript Tag v2.4.3 */-->
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=13");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_002.js"></script><a href="http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=18__zoneid=13__cb=b407c2c8bd__maxdest=http://www.eztrackz.com/tracking.aspx?id=88335" target="_blank"><img src="Jeremy_Opinions_MVC_files/banner125x125.jpg" alt="MaximumASP - 1 Month Free" title="MaximumASP - 1 Month Free" border="0" height="125" width="125"></a><div id="beacon_18" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_002.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=a93dd916&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=13&amp;n=a93dd916'
+border='0' alt='' /></a></noscript>
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=14");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs.js"></script><a href="http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=26__zoneid=14__cb=201bf1464f__maxdest=http://www.red-gate.com/products/ants_profiler/improve_dotnet_performance.htm?utm_source=cb&amp;utm_medium=button&amp;utm_content=improveperf&amp;utm_campaign=antsprofiler" target="_blank"><img src="Jeremy_Opinions_MVC_files/slowcodefast_125x125_012.gif" alt="" title="" border="0" height="125" width="125"></a><div id="beacon_26" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_007.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=a93dd916&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=14&amp;n=a93dd916'
+border='0' alt='' /></a></noscript>
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=15");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_008.js"></script><div id="m3_23fcac82d372dbe517816612e9a8d707" style="display: inline;"><embed type="application/x-shockwave-flash" src="Jeremy_Opinions_MVC_files/rs40release_125x125.swf" id="mymovie" name="mymovie" quality="high" height="125" width="125"></div>
+<script type="text/javascript">
+<!--// <![CDATA[
+var fo = new FlashObject('http://ads.codebetter.com/images/rs40release_125x125.swf?clickTARGET=_blank&clickTAG=http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=28__zoneid=15__cb=36e26e35cf', 'mymovie', '125', '125', '8');
+fo.write('m3_23fcac82d372dbe517816612e9a8d707');
+// ]]> -->
+</script><div id="beacon_28" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_005.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=a93dd916&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=15&amp;n=a93dd916'
+border='0' alt='' /></a></noscript>
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=16");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_006.js"></script><a href="http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=24__zoneid=16__cb=be8a2892d9__maxdest=http://www.discountasp.net/go/go.aspx?i=5290" target="_blank"><img src="Jeremy_Opinions_MVC_files/125x125_youdecideusuk_flag_sm.gif" alt="USA &amp; Europe Data Centers – DiscountASP.NET" title="USA &amp; Europe Data Centers – DiscountASP.NET" border="0" height="125" width="125"></a><div id="beacon_24" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=a93dd916&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=16&amp;n=a93dd916'
+border='0' alt='' /></a></noscript>
+
+ 						                         <!-- begin sidebar footer -->
+                         </div>
+                         
+	                </div>
+	                <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>                                    
+                <!-- end sidebar footer -->
+</div>
+
+
+
+              <!--/* Openads Javascript Tag v2.4.3 */-->
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=10");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_007.js"></script><div id="CommonSidebarRight">
+<div class="CommonSidebar">
+<!-- begin sidebar header -->
+<div class="CommonSidebarArea">
+<div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+<div class="CommonSidebarInnerArea">
+<h4 class="CommonSidebarHeader">The Lounge</h4>
+<div class="CommonSidebarContent">
+<!-- end sidebar header -->
+<div id="adzerk">
+<div id="adzerk_ad_div"><a href="http://theloungenet.com/redirect/23298979" title="Developer Express"><img id="adzerk_ad" src="Jeremy_Opinions_MVC_files/devexpress4.gif" title="Developer Express" alt="Developer Express" border="0" height="90" width="120"></a><p>Ready to Code at the Speed of Thought? Experience CodeRush by DevExpress. <a href="http://theloungenet.com/redirect/23298979">Get Your Free Trial Today!</a></p></div>
+<p id="adzerk_by">
+<a href="http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=8__zoneid=10__cb=2b899b7a17__maxdest=http://theloungenet.com" target="_blank">Ads by The Lounge</a>
+</p>
+</div>                         <!-- begin sidebar footer -->
+</div>
+</div>
+<div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+</div>
+</div></div><div id="beacon_8" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_003.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=a3c68762&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=10&amp;n=a3c68762'
+border='0' alt='' /></a></noscript>
+           
+
+<div style="padding: 8px;"><script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=6&amp;target=_blank");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_009.js"></script><a href="http://ads.codebetter.com/delivery/ck.php?oaparams=2__bannerid=23__zoneid=6__cb=ff877f7688__maxdest=http://www.discountasp.net/go/go.aspx?i=5282" target="_blank"><img src="Jeremy_Opinions_MVC_files/300x250_usukflags_kid_sm.gif" alt="Data Centers in USA &amp; UK – DiscountASP.NET" title="Data Centers in USA &amp; UK – DiscountASP.NET" border="0" height="250" width="300"></a><div id="beacon_23" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_004.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=af2e3ecf&amp;cb=391047'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=6&amp;n=af2e3ecf'
+border='0' alt='' /></a></noscript>
+</div>
+
+<div style="padding: 8px;">
+<!--/* Openads Javascript Tag v2.4.3 */-->
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=12");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_010.js"></script><noscript><a
+href='http://ads.codebetter.com/delivery/ck.php?n=a460f468&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img
+src='http://ads.codebetter.com/delivery/avw.php?zoneid=12&amp;n=a460f468'
+border='0' alt='' /></a></noscript>
+</div>
+
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.codebetter.com/delivery/ajs.php':'http://ads.codebetter.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=21");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="Jeremy_Opinions_MVC_files/ajs_004.js"></script><script type="text/javascript"><!--
+google_ad_client = "pub-2785396000675099";
+/* 336x280, created 4/8/08 */
+google_ad_slot = "8172138410";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript" src="Jeremy_Opinions_MVC_files/show_ads.js">
+</script><script> window.google_render_ad(); </script><iframe name="google_ads_frame" src="Jeremy_Opinions_MVC_files/ads_002.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="280" scrolling="no" width="336"></iframe><div id="beacon_13" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="Jeremy_Opinions_MVC_files/lg_009.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+
+
+						
+ </div>
+                
+
+                            <div id="CommonSidebarRight">
+    
+    
+        <div class="CommonSidebar">
+        
+        <div class="CommonSidebarArea">
+	        <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+	        <div class="CommonSidebarInnerArea">
+                <h4 class="CommonSidebarHeader">This Blog</h4>
+                <div class="CommonSidebarContent">
+                    <ul class="CommonSidebarList">
+		                <li><a href="http://codebetter.com/blogs/jeremy.miller/default.aspx">Home</a></li>
+			            <li><a href="http://codebetter.com/blogs/jeremy.miller/contact.aspx">Contact</a></li>
+			            
+			            
+		            </ul>
+		        </div>
+            </div>
+	        <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+        </div>
+    
+        
+        
+        
+        <div class="CommonSidebarArea">
+	        <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+	        <div class="CommonSidebarInnerArea">
+                <h4 class="CommonSidebarHeader">Syndication</h4>
+                <div class="CommonSidebarContent">
+                    <ul class="CommonSidebarList">
+                        <li><a href="http://codebetter.com/blogs/jeremy.miller/rss.aspx">RSS</a></li>
+			            <li><a href="http://codebetter.com/blogs/jeremy.miller/atom.aspx">Atom</a></li>
+			            <li id="RssComments"><a href="http://codebetter.com/blogs/jeremy.miller/rsscomments.aspx">Comments RSS</a></li>
+			            
+                    </ul>
+                </div>
+            </div>
+	        <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+        </div>
+
+        
+        
+                <div class="CommonSidebarArea" id="RecentPosts">
+	                <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+	                <div class="CommonSidebarInnerArea">
+                        <h4 class="CommonSidebarHeader">Recent Posts</h4>
+                        <div class="CommonSidebarContent">
+                            <ul class="CommonSidebarList">
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/27/a-quick-storyteller-update.aspx">A Quick StoryTeller Update</a></li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/26/structuremap-2-5-is-released.aspx">StructureMap 2.5 is Released!</a></li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/25/initializing-and-configuring-a-structuremap-container.aspx">Initializing and Configuring a StructureMap Container</a></li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/25/embedding-structuremap-configuration-into-the-app-config-file.aspx">Embedding StructureMap configuration into the App.config file</a></li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/25/the-structuremap-config-file.aspx">The StructureMap.Config File</a></li>
+            
+                            </ul>
+                        </div>
+                    </div>
+	                <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+            
+        
+        
+        
+                <div class="CommonSidebarArea">
+	                <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+	                <div class="CommonSidebarInnerArea">
+                        <h4 class="CommonSidebarHeader">Tags</h4>
+                        <div class="CommonSidebarContent">
+            <ul class="CommonSidebarTagCloud">
+<li class="CommonTag6"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/ALT.NET/default.aspx" rel="tag">ALT.NET</a></li>
+<li class="CommonTag5"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/altnetconf/default.aspx" rel="tag">altnetconf</a></li>
+<li class="CommonTag2"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Build+your+own+CAB/default.aspx" rel="tag">Build your own CAB</a></li>
+<li class="CommonTag3"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Continuous+Integration/default.aspx" rel="tag">Continuous Integration</a></li>
+<li class="CommonTag3"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Database+and+Persistence/default.aspx" rel="tag">Database and Persistence</a></li>
+<li class="CommonTag1"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Design+Patterns/default.aspx" rel="tag">Design Patterns</a></li>
+<li class="CommonTag6"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/DI/default.aspx" rel="tag">DI</a></li>
+<li class="CommonTag3"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Featured/default.aspx" rel="tag">Featured</a></li>
+<li class="CommonTag6"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/IOC/default.aspx" rel="tag">IOC</a></li>
+<li class="CommonTag4"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Legacy+Code/default.aspx" rel="tag">Legacy Code</a></li>
+<li class="CommonTag4"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Maintainability/default.aspx" rel="tag">Maintainability</a></li>
+<li class="CommonTag4"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Pair+Programming/default.aspx" rel="tag">Pair Programming</a></li>
+<li class="CommonTag1"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Ranting/default.aspx" rel="tag">Ranting</a></li>
+<li class="CommonTag5"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Starting+a+new+Project/default.aspx" rel="tag">Starting a new Project</a></li>
+<li class="CommonTag3"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/StoryTeller/default.aspx" rel="tag">StoryTeller</a></li>
+<li class="CommonTag2"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/StructureMap/default.aspx" rel="tag">StructureMap</a></li>
+<li class="CommonTag5"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/TDD+Starter+Kit/default.aspx" rel="tag">TDD Starter Kit</a></li>
+<li class="CommonTag6"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Test+Automation+Week/default.aspx" rel="tag">Test Automation Week</a></li>
+<li class="CommonTag1"><a href="http://codebetter.com/blogs/jeremy.miller/archive/tags/Test+Driven+Development/default.aspx" rel="tag">Test Driven Development</a></li>
+</ul>
+
+                        </div>
+                    </div>
+	                <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+            
+      
+        
+        
+                <div class="CommonSidebarArea" id="NewsSidebar">
+                    <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                    <div class="CommonSidebarInnerArea">
+                        <div class="CommonSidebarTopRound"><div class="t1"></div><div class="t2"></div><div class="t3"></div><div class="t4"></div></div>
+                        <h4 class="CommonSidebarHeader">News</h4>
+                        <div class="CommonSidebarContent">
+            <p>All
+opinions expressed here constitute my (Jeremy D. Miller's) personal
+opinion, and do not necessarily represent the opinion of any other
+organization or person, including (but not limited to) my fellow
+employees, my employer, its clients or their agents.</p>
+
+<a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/07/18/129330.aspx">About Me</a>
+<br><br>
+<a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/08/07/148071.aspx">"Best Of" Compendium</a>
+<br><br>
+<a href="http://structuremap.sourceforge.net/">StructureMap (Dependency Injection for .Net)</a>
+<br><br>
+<a href="http://storyteller.tigris.org/">StoryTeller (Supercharged Fit)</a>
+<br><br>
+<a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/07/25/the-build-your-own-cab-series-table-of-contents.aspx">Build your own Cab</a>
+<br><br>
+<a href="http://testdriven.com/"><img src="Jeremy_Opinions_MVC_files/imtd4.gif" alt="TestDriven" align="middle"></a>
+<br><br>
+<img src="Jeremy_Opinions_MVC_files/original.gif" alt="MVP" align="middle">
+
+
+
+                        </div>
+                    </div>
+	                <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+                            
+                        
+        
+        
+                <div class="CommonSidebarArea">
+	                <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+	                <div class="CommonSidebarInnerArea">
+                        <h4 class="CommonSidebarHeader">Blogs I Read</h4>
+                        <div class="CommonSidebarContent">
+                            
+<ul class="CommonSidebarList">
+<li><a href="http://blackbox.cs.fit.edu/blog/james/">James Bach</a></li><li><a href="http://www.jnsk.se/weblog/">Jimmy Nilsson</a></li><li><a href="http://www.joelonsoftware.com/">Joel Spolsky</a></li><li><a href="http://homepage.mac.com/keithray/blog/">C. Keith Ray</a></li><li><a href="http://butunclebob.com/">ObjectMentor Blogs</a></li><li><a href="http://www.braithwaite-lee.com/weblog/">Reg Braithwaite</a></li><li><a href="http://www.testingreflections.com/">testingReflections</a></li><li><a href="http://www.williamcaputo.com/">William Caputo</a></li><li><a href="http://www.jamesshore.com/">James Shore</a></li><li><a href="http://www.agilelectric.com/">Chris Wheeler</a></li><li><a href="http://hrboyceiii.blogspot.com/">Harris Boyce III</a></li><li><a href="http://blogs.thoughtworks.com/">ThoughtWorks Blogs</a></li><li><a href="http://blogs.thoughtworks.com/alumni/">ThoughtWorks Alumni</a></li><li><a href="http://steve.emxsoftware.com/">Steve Eichert</a></li><li><a href="http://weblogs.asp.net/astopford/">Andrew Stopford</a></li><li><a href="http://weblogs.asp.net/rosherove">Roy Osherove</a></li><li><a href="http://www.ayende.com/Blog/">Ayende Rahein</a></li><li><a href="http://feeds.feedburner.com/SamGentilesBlog">Sam Gentile</a></li><li><a href="http://www.lenholgate.com/">Len Holgate</a></li><li><a href="http://udidahan.weblogs.us/">Udi Dahan</a></li>
+</ul>
+                        </div>
+                    </div>
+	                <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+            
+        
+        
+        
+                <div class="CommonSidebarArea" id="ArchiveSideBar">
+                    <div class="CommonSidebarRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                    <div class="CommonSidebarInnerArea">
+                        <h4 class="CommonSidebarHeader">Archives</h4>
+                        <div class="CommonSidebarContent">
+                            <ul class="CommonSidebarList">
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/10.aspx">October 2008</a> (17)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/09.aspx">September 2008</a> (17)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/08.aspx">August 2008</a> (10)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/07.aspx">July 2008</a> (9)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/06.aspx">June 2008</a> (11)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/05.aspx">May 2008</a> (9)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/04.aspx">April 2008</a> (11)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/03.aspx">March 2008</a> (11)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/02.aspx">February 2008</a> (15)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2008/01.aspx">January 2008</a> (25)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/12.aspx">December 2007</a> (13)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/11.aspx">November 2007</a> (10)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/10.aspx">October 2007</a> (25)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/09.aspx">September 2007</a> (22)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/08.aspx">August 2007</a> (15)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/07.aspx">July 2007</a> (17)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/06.aspx">June 2007</a> (21)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/05.aspx">May 2007</a> (18)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/04.aspx">April 2007</a> (24)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/03.aspx">March 2007</a> (18)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/02.aspx">February 2007</a> (10)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/01.aspx">January 2007</a> (21)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/12.aspx">December 2006</a> (12)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/11.aspx">November 2006</a> (8)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/10.aspx">October 2006</a> (22)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/09.aspx">September 2006</a> (7)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/08.aspx">August 2006</a> (11)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/07.aspx">July 2006</a> (15)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/06.aspx">June 2006</a> (15)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/05.aspx">May 2006</a> (13)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/04.aspx">April 2006</a> (10)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/03.aspx">March 2006</a> (8)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/02.aspx">February 2006</a> (12)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2006/01.aspx">January 2006</a> (9)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/12.aspx">December 2005</a> (4)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/11.aspx">November 2005</a> (12)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/10.aspx">October 2005</a> (17)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/09.aspx">September 2005</a> (17)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/08.aspx">August 2005</a> (16)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/07.aspx">July 2005</a> (20)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/06.aspx">June 2005</a> (14)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/05.aspx">May 2005</a> (3)</li>
+            
+                <li><a href="http://codebetter.com/blogs/jeremy.miller/archive/2005/04.aspx">April 2005</a> (2)</li>
+            
+                            </ul>
+                        </div>
+                    </div>
+	                <div class="CommonSidebarRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+             
+        
+        </div>
+    
+
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cb_footer">
+                
+                     <table>
+<tbody>
+<tr>
+<td>
+<p>
+<b>
+About CodeBetter.Com<br></b><a href="http://www.codebetter.com/blogs/brendan.tompkins/articles/63977.aspx" style="color: rgb(255, 255, 255);" mce_href="http://www.codebetter.com/blogs/brendan.tompkins/articles/63977.aspx"><br>CodeBetter.Com FAQ</a><a href="http://www.codebetter.com/blogs/brendan.tompkins/articles/category/1132.aspx" style="color: rgb(255, 255, 255);" mce_href="http://www.codebetter.com/blogs/brendan.tompkins/articles/category/1132.aspx"><br>Our Manifesto</a>
+<br>Advertisers should contact <a href="mailto:brendan@codebetter.com">Brendan</a>
+</p>
+</td>
+
+<td>
+
+<p><b>
+Subscribe <a href="http://codebetter.com/blogs/MainFeed.aspx" title="Subscribe to my feed"><img src="Jeremy_Opinions_MVC_files/feed-icon.gif" mce_src="/Themes/default/images/rss/feed-icon.gif" style="border: 0pt none ;"></a> 
+</b></p>
+
+<p><a href="http://codebetter.com/blogs/MainFeed.aspx" title="Subscribe to my feed">Google Reader or Homepage</a><br>
+<a href="http://del.icio.us/post?url=http://codebetter.com&amp;title=CodeBetter.com%20Latest%20Items" target="_blank">del.icio.us CodeBetter.com Latest Items<br></a><a href="http://add.my.yahoo.com/rss?url=http://codebetter.com/blogs/MainFeed.aspx">Add to My Yahoo!</a><br>
+<a href="http://www.bloglines.com/sub/http://codebetter.com/blogs/MainFeed.aspx">Subscribe with Bloglines</a><br>
+<a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http://codebetter.com/blogs/MainFeed.aspx">Subscribe in NewsGator Online</a><br>
+<a href="http://www.feedster.com/myfeedster.php?action=addrss&amp;rssurl=http://codebetter.com/blogs/MainFeed.aspx&amp;confirm=no">Subscribe with myFeedster</a><br>
+<a href="http://feeds.my.aol.com/add.jsp?url=http://codebetter.com/blogs/MainFeed.aspx">Add to My AOL</a><br>
+<a href="http://www.furl.net/storeIt.jsp?u=http://www.codebetter.com" target="_blank">Furl CodeBetter.com Latest Items</a><br>
+<a href="http://www.rojo.com/add-subscription?resource=http://codebetter.com/blogs/MainFeed.aspx"> Subscribe in Rojo</a>
+</p>
+</td>
+
+<td>
+<p>
+<b>Member Projects</b>
+</p>
+
+<p>	<a href="http://codebetter.com/blogs/products/pages/64419.aspx" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl00_TitleLink">WSMQ - Brendan Tompkins</a>
+	<span class="excerpt"></span><span class="author"></span><br>
+	<a href="http://www.davidhayden.com/" target="_blank" mce_href="http://www.davidhayden.com" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl03_TitleLink">Sarasota Web Design - David Hayden<br></a><a href="http://www.pnpguidance.net/" target="_blank" mce_href="http://www.pnpguidance.net" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl03_TitleLink">Patterns &amp; Practices - David Hayden</a><br>
+<a href="http://codebetter.com/blogs/products/pages/64431.aspx" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl05_TitleLink">dotMath - Steve Hebert</a>
+<br><a href="http://codebetter.com/blogs/products/pages/131464.aspx" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl06_TitleLink">EZWeb - Jeffrey Palermo</a>
+<a href="http://codebetter.com/blogs/products/pages/131734.aspx" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl07_TitleLink"><br>Structure Map - Jeremy D. Miller</a>
+<a href="http://storyteller.tigris.org/" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl07_TitleLink"><br>StoryTeller - Jeremy D. Miller</a>
+<a href="http://codebetter.com/blogs/products/pages/Karl-Seguin-_2D00_-The-Code-Wiki.aspx" class="title" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist3___Posts___Posts_ctl08_TitleLink"><br>The Code Wiki - Karl Seguin</a><br><br>&nbsp;</p>
+</td>
+
+<td>
+<p><b>Friends of CodeBetter.Com</b></p>
+
+
+<p>
+	<a href="http://codebetter.com/blogs/products/pages/64386.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl00_TitleLink" class="title">Red-Gate Tools For SQL and .NET<br></a>
+	<span class="excerpt"></span><a href="http://codebetter.com/blogs/products/pages/64388.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl01_TitleLink" class="title">BlogJet</a>
+<br>	<a href="http://codebetter.com/blogs/products/pages/64394.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl02_TitleLink" class="title">CodeSmith 3.0<br></a>
+	<a href="http://codebetter.com/blogs/products/pages/64395.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl03_TitleLink" class="title">SourceGear Vault</a>
+<br>	<a href="http://codebetter.com/blogs/products/pages/64615.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl04_TitleLink" class="title">Telerik<br></a>
+	<a href="http://codebetter.com/blogs/products/pages/129968.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl05_TitleLink" class="title">ComponentArt</a>
+<br>	<a href="http://codebetter.com/blogs/products/pages/132329.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl06_TitleLink" class="title">VistaDB</a>
+<br>	<a href="http://codebetter.com/blogs/products/pages/142174.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl07_TitleLink" class="title">JetBrains - ReSharper<br></a>
+	<a href="http://codebetter.com/blogs/products/pages/Beyond-Compare.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl08_TitleLink" class="title">Beyond Compare<br></a>
+	<a href="http://codebetter.com/blogs/products/pages/.NET-Memory-Profiler.aspx" id="ctl00_ctl00_bcr_Aggregatecompactarticlelist2___Posts___Posts_ctl09_TitleLink" class="title">.NET Memory Profiler</a><br><a href="http://www.ndepend.com/" mce_href="http://www.ndepend.com/">NDepend</a> <br><a href="http://www.alicommerce.com/" target="_blank" mce_href="http://www.alicommerce.com">AliCommerce</a> 
+ <br><a href="http://www.sapphiresteel.com/">Ruby In Steel</a>
+ <br><a href="http://www.slickedit.com/">SlickEdit</a> <br>
+<a href="http://www.gurock.com/products/smartinspect/">SmartInspect .NET
+Logging</a> 
+<br>
+NGEDIT: <a href="http://www.viemu.com/">ViEmu</a> and <a href="http://www.codekana.com/">Codekana</a> <br><a href="http://liteaccounting.com/" target="_blank">LiteAccounting.Com</a>
+
+ <br><a href="http://www.devexpress.com/" target="_blank">DevExpress</a><br><a href="http://hedgehoglab.com/products/fixx/" mce_href="http://hedgehoglab.com/products/fixx/">Fixx</a> &lt;-- NEW Friend!<br><br></p>
+
+</td>
+</tr>
+</tbody></table>
+
+<p>
+<a href="http://communityserver.org/r.ashx?j" id="ctl00_ctl00_EulaHyperlink"></a><br>
+Site Copyright © 2007 CodeBetter.Com <br>
+Content Copyright Individual Bloggers <br></p>
+<img src="Jeremy_Opinions_MVC_files/PoweredByCS_commercial.GIF" style="border-width: 0px;" alt="Community Server (Commercial Edition)" id="ctl00_ctl00_EulaImage">
+                    
+                    
+                
+            </div>
+        
+
+		                          					                            				                      
+	    	
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08"), document.getElementById("ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05"), document.getElementById("ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08 = document.all ? document.all["ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08"] : document.getElementById("ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08");
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08.controltovalidate = "ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbName";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08.errormessage = "*";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08.validationGroup = "CreateCommentForm";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl08.initialvalue = "";
+var ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05 = document.all ? document.all["ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05"] : document.getElementById("ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05");
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05.controltovalidate = "ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_tbComment";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05.errormessage = "*";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05.validationGroup = "CreateCommentForm";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl05.initialvalue = "";
+var ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32 = document.all ? document.all["ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32"] : document.getElementById("ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32");
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32.controltovalidate = "ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_CaptchaTextBox";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32.errormessage = "*";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32.display = "Dynamic";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32.validationGroup = "CreateCommentForm";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32.clientvalidationfunction = "ValidateCaptcha";
+ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl14_ctl02_ctl02_ctl02_ctl32.validateemptytext = "true";
+//]]>
+</script>
+
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx"
+dc:identifier="http://codebetter.com/blogs/jeremy.miller/archive/2008/10/23/our-opinions-on-the-asp-net-mvc-introducing-the-thunderdome-principle.aspx"
+dc:title="Our “Opinions” on the ASP.NET MVC (Introducing the Thunderdome Principle)"
+trackback:ping="http://codebetter.com/blogs/jeremy.miller/trackback.ashx?PostID=184224" />
+</rdf:RDF>
+-->
+<script type="text/javascript">
+<!--
+function KeyDownHandlerctl00_ctl00_ctl00_SearchForm1_ctl00_TitleBarSearchButton(event)
+{
+	if (event.keyCode == 13)
+	{
+		event.returnValue = false;
+		event.cancel = true;
+     __doPostBack('ctl00$ctl00$ctl00$SearchForm1$ctl00$TitleBarSearchButton','')	}
+}
+
+//-->
+</script>
+<script type="text/javascript">
+// <![CDATA[
+window.ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl11_ctl01 = new Telligent_InlineEditorPanel('ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl11_ctl01','ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl11_ctl01','ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl11_ctl01_State','ctl00_ctl00_ctl00_bcr_bcr_bcr_ctl11_ctl00',false,null,null,null);
+// ]]>
+</script>
+<script type="text/javascript">
+<!--
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+// -->
+</script>
+        <script type="text/javascript">
+// <![CDATA[
+Telligent_Modal.Configure('/utility/loading.htm',['CommonModal'],['CommonModalTitle'],['CommonModalClose'],['CommonModalContent'],['CommonModalFooter'],['CommonModalResize'],['CommonModalMask'],100);
+// ]]>
+</script></form>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shCore.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushCSharp.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushPhp.js"></script>
+
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushJScript.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushJava.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushVb.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushSql.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushXml.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushDelphi.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushPython.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushRuby.js"></script>
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushCss.js"></script>
+
+<script class="javascript" src="Jeremy_Opinions_MVC_files/shBrushCpp.js"></script>
+<script class="javascript">
+dp.SyntaxHighlighter.ClipboardSwf = 'Scripts/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+    
+
+</body></html>

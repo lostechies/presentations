@@ -1,0 +1,25 @@
+(function(i) {u = navigator.userAgent; e = /*@cc_on!@*/false; st = setTimeout;
+if(/webkit/i.test(u)){st(function(){dr = document.readyState;if(dr=="loaded"||
+dr=="complete"){i();}else{st(arguments.callee,10);}},10);}else if((/mozilla/i.
+test(u)&&!/(compati)/.test(u))||(/opera/i.test(u))){document.addEventListener(
+"DOMContentLoaded",i,false);} else if(e){(function(){t=document.createElement(
+'doc:ready');try{t.doScroll('left');i();t= null;}catch(e){st(arguments.callee,
+0);}})();}else{window.onload = i;}})(function() {
+
+  // Stylesheet loaded into HEAD tag directly, but in-line it to avoid
+  // making another HTTP request.
+  var s=document.createElement('style');
+  document.getElementsByTagName('head')[0].appendChild(s);
+
+  var css = "#adzerk_ad { float: left; margin-right: 10px;} #adzerk_ad_div { width: 270px; } #adzerk { margin-top: 5px; width: 140px; text-align: left; } #adzerk_by { margin-top: 10px; font-size: 10px; font-family: Verdana; }";
+
+  if(!!window.ActiveXObject) { // ie.
+      document.styleSheets[document.styleSheets.length-1].cssText = css;
+  } else {
+      stylenode = document.createTextNode(css);
+      s.appendChild(stylenode);
+  }
+
+  badge = document.getElementById("adzerk_ad_div");
+  if (badge) badge.innerHTML = '<a href="http://theloungenet.com/redirect/23298979" title="Developer Express"><img id="adzerk_ad" src="http://static.theloungenet.com/sponsors/devexpress4.gif" title="Developer Express" alt="Developer Express" border="0" height="90" width="120" /></a><p>Ready to Code at the Speed of Thought? Experience CodeRush by DevExpress. <a href="http://theloungenet.com/redirect/23298979">Get Your Free Trial Today!</a></p>';
+});

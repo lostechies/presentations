@@ -1,0 +1,780 @@
+
+
+/* General Styles */
+
+body, html, .CommonContent
+{
+    font-family: Arial, Helvetica;
+    color: #000000;
+}
+
+form
+{
+    background-color: #A9A9A9;
+    background-image: none;
+    min-width: 960px;
+}
+
+
+A:LINK
+{
+    color: #646464;
+}
+
+A:ACTIVE
+{
+    color: #646464;
+}
+
+A:VISITED
+{
+    color: #515050;
+}
+
+SELECT, TEXTAREA, INPUT, BUTTON
+{
+    font-family: Arial, Helvetica;
+}
+
+.Common
+{
+    width: 960px;
+}
+
+/* Header Styles */
+
+#CommonHeader
+{
+    border-top-color: #FFFFFF;
+    background-image: none;
+    background-color: #FFFFFF;
+}
+
+#CommonHeaderUserRoundBottom .r1, #CommonHeaderUserRoundBottom .r2, #CommonHeaderUserRoundBottom .r3, #CommonHeaderUserRoundBottom .r4,
+#CommonHeaderUserRoundLeft .r1, #CommonHeaderUserRoundLeft .r2, #CommonHeaderUserRoundLeft .r3, #CommonHeaderUserRoundLeft .r4,
+#CommonHeaderUserRoundRight .r1, #CommonHeaderUserRoundRight .r2, #CommonHeaderUserRoundRight .r3, #CommonHeaderUserRoundRight .r4,
+#CommonHeaderUserContent
+{
+    background-color: #FFFFFF;
+}
+
+#CommonHeader table td
+{
+    height: 77px;
+}
+
+/* Navigation Styles */
+
+#CommonNavigation
+{
+    background-color: #FFFFFF;
+}
+
+#CommonNavigation a:link, #CommonNavigation a:active, #CommonNavigation a:visited
+{
+    color: #000000;
+}
+
+#CommonNavigation a:hover
+{
+    color: #FFFFFF;
+}
+
+#CommonNavigation a.Selected:link, #CommonNavigation a.Selected:active, #CommonNavigation a.Selected:visited
+{
+    color: #FFFFFF;
+}
+
+.CommonBreadCrumbArea
+{
+    background-color: #E9EEF9;
+    color: #000000;
+}
+
+.CommonBreadCrumbArea a:link, .CommonBreadCrumbArea a:visited, .CommonBreadCrumbArea a:active
+{
+    color: #000000;
+}
+
+/* Body Styles */
+
+.CommonTitle, .CommonProfileTitle, .CommonTitle A:LINK, .CommonTitle A:ACTIVE, .CommonTitle A:VISITED, .CommonTitle A:HOVER, .ForumThreadPostTitle
+{
+    font-family: Arial, Helvetica;
+    color: #000000;
+}
+
+.CommonTitle, .CommonProfileTitle, 
+{
+    font-size: 280%;
+}
+
+#CommonHeaderTitle
+{
+    font-size: 140%;
+}
+
+#CommonHeaderTitle h1, #CommonHeaderTitle h1 A:LINK, #CommonHeaderTitle h1 A:VISITED, #CommonHeaderTitle h1 A:ACTIVE
+{
+    font-family: Arial, Helvetica;
+    color: #54546F;
+}
+
+.CommonSubTitle, .CommonHeader, .CommonFormTitle
+{
+    font-family: Arial, Helvetica;
+    color: #000000;
+}
+
+.CommonInlineMessageTitle
+{
+    font-size: 100%;
+}
+
+.CommonInlineMessageTitle, .CommonMessageTitle
+{
+    font-family: Arial, Helvetica;
+    background-color: #FFFFFF;
+}
+
+.CommonInlineMessageTitle, .CommonInlineMessageTitle A:LINK, .CommonInlineMessageTitle A:VISITED, .CommonInlineMessageTitle A:ACTIVE, 
+.CommonInlineMessageTitle A:HOVER, .CommonMessageTitle
+{
+    color: #000000;
+}
+
+.CommonInlineMessageArea, .CommonInlineMessageTitle, .CommonMessageContent, .CommonMessageTitle
+{
+    border-color: #E1E1E1;
+}
+
+.ForumPostHeader
+{
+    font-size: 90%;
+    color: #000000;
+    font-family: Arial, Helvetica;
+    background-color: #9AB5EC;
+}
+
+.ForumPostHeader, .ForumPostManagementArea, .ForumPostTitleArea, .ForumPostContentArea, .ForumPostUserArea, .ForumPostFooterArea
+{
+    border-color: #E1E1E1;
+}
+
+.ForumPostTitleArea, .ForumPostManagementArea
+{
+    background-color: #F4F4F4;
+}
+
+.ForumPostUserArea
+{
+    background-color: #EEEEEE;
+}
+
+.ForumPostContentArea
+{
+    color: #000000;
+}
+
+
+/* Tag Styles */
+
+.CommonTag1 a:link, .CommonTag1 a:visited, .CommonTag1 a:active
+{
+    color: #0F0F0F;
+}
+
+.CommonTag2 a:link, .CommonTag2 a:visited, .CommonTag2 a:active
+{
+    color: #202020;
+}
+
+.CommonTag3 a:link, .CommonTag3 a:visited, .CommonTag3 a:active
+{
+    color: #313131;
+}
+
+.CommonTag4 a:link, .CommonTag4 a:visited, .CommonTag4 a:active
+{
+    color: #424242;
+}
+
+.CommonTag5 a:link, .CommonTag5 a:visited, .CommonTag5 a:active
+{
+    color: #535353;
+}
+
+.CommonTag6 a:link, .CommonTag6 a:visited, .CommonTag6 a:active
+{
+    color: #646464;
+}
+
+A.ForumGroupNameRead, .ForumGroupNameRead:LINK, .ForumGroupNameRead:VISITED, A.ForumNameRead, .ForumNameRead:LINK, .ForumNameRead:VISITED
+{
+    color: #515050;
+}
+
+A.ForumGroupNameUnRead, .ForumGroupNameUnRead:LINK, .ForumGroupNameUnRead:VISITED, A.ForumNameUnRead, .ForumNameUnRead:LINK, .ForumNameUnRead:VISITED
+{
+    color: #646464;
+}
+
+/* List Styles */
+
+.CommonListTitle
+{
+    font-family: Arial, Helvetica;
+    font-size: 180%;
+}
+
+.CommonListTitle, .CommonListTitle a:link, .CommonListTitle a:visited, .CommonListTitle a:active
+{
+    color: #000000;
+}
+
+.CommonListHeader, .CommonListHeaderLeftMost
+{
+    background-color: #E1E1E1;
+    color: #999999;
+}
+
+.CommonListRowAlt td
+{
+    background-color: #FFFFCC;
+}
+
+.CommonListHeader, .CommonListHeaderLeftMost, .CommonListCell, .CommonListCellLeftMost, .ForumListCellLeftMostImageOnly, .ForumListCellImageOnly, .FileListCellLeftMostImageOnly
+{
+    border-color: #E1E1E1;
+}
+
+/* Footer Styles */
+
+#CommonFooter, body, html
+{
+    background-image: none;
+    background-color: #FFFFFF;
+}
+
+/* Sidebar Styles */
+
+#CommonSidebarLeft .CommonSidebar, #CommonSidebarRight .CommonSidebar
+{
+    width: 312px;
+}
+
+.CommonSidebarInnerArea, .CommonSidebarRoundTop .r1, .CommonSidebarRoundTop .r2, .CommonSidebarRoundTop .r3, .CommonSidebarRoundTop .r4, .CommonSidebarRoundBottom .r1, .CommonSidebarRoundBottom .r2, .CommonSidebarRoundBottom .r3, .CommonSidebarRoundBottom .r4
+{
+    background-color: #FFFFFF;
+    border-color: #999999;
+}
+
+.CommonSidebarHeader, .CommonSidebarFooter
+{
+    border-color: #FFFFFF;
+}
+
+.CommonSidebarHeader, .CommonSidebarHeader A:LINK, .CommonSidebarHeader A:VISITED, .CommonSidebarHeader A:ACTIVE, .CommonSidebarHeader A:HOVER
+{
+    color: #999999;
+}
+
+/* Modal Styles */
+
+.CommonModal1, .CommonModal2, .CommonModal3, .CommonModal4, .CommonModal5 
+{
+    background-color: #CCCCCC;
+}
+
+.CommonModal1, .CommonModal2, .CommonModal3, .CommonModal4, .CommonModal5, .CommonModalTitle, .CommonModalFooter
+{
+    border-color: #666666;
+}
+
+.CommonModalTitle
+{
+    color: #000000;
+    font-family: Arial, Helvetica;
+}
+
+.sponsors
+{
+  margin:8px;
+}
+
+.sponsors img
+{
+  margin:8px;
+}
+
+.BlogPostContent{
+color:#555555;
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:100%;
+border:0 none;;
+font-style:inherit;
+font-weight:inherit;
+line-height:1.46;
+outline-style:none;
+outline-width:0;
+padding:0;
+text-align:justify;
+vertical-align:baseline;
+width:610px;
+}
+
+.BlogPostFooter{
+width:610px !important;
+}
+div#profilebox {
+background:#FEFFDF none repeat scroll 0%;
+border:1px solid #FFFF00;
+padding:10px 10px;
+margin:8px;
+vertical-align:middle;
+width:650px;
+}
+
+div#profilebird {
+clear:both;
+height:48px;
+margin:0px;
+padding:0px;
+position:absolute;
+}
+
+ul.video_list {
+list-style-type:none;
+margin-left:0pt;
+}
+ul.video_list li {
+float:left;
+font-size:10px;
+height:18.5em;
+margin:0pt 1.25em 2em 0pt;
+width:17.1em;
+}
+ul.video_list li a.thumb {
+background:#888888 none repeat scroll 0% 0%;
+border:3px solid #DDDDDD;
+display:block;
+height:126px;
+margin-bottom:0.4em;
+padding:1px;
+position:relative;
+width:165px;
+}
+ul.video_list li a.thumb img {
+height:126px;
+width:165px;
+}
+ul.video_list li a.thumb span.live {
+background:transparent url(/images/live_ribbon.png) no-repeat scroll 0pt 0pt;
+bottom:-3px;
+display:block;
+height:42px;
+position:absolute;
+right:-3px;
+text-indent:-10000em;
+width:43px;
+z-index:10;
+}
+ul.video_list li a.thumb span.yours {
+background:transparent url(/images/you_ribbon.gif) no-repeat scroll 0pt 0pt;
+bottom:-3px;
+display:block;
+height:42px;
+position:absolute;
+right:-3px;
+text-indent:-10000em;
+width:43px;
+z-index:10;
+}
+ul.video_list li b.title {
+color:#475F57;
+display:block;
+font-size:1.4em;
+line-height:1.4em;
+}
+ul.video_list li span.user {
+-x-system-font:none;
+color:#849A8F;
+display:block;
+font-family:Arial;
+font-size:1.1em;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin-bottom:0.3em;
+}
+ul.video_list li span.user a {
+color:#44504C;
+}
+ul.video_list li span.time {
+-x-system-font:none;
+color:#849A8F;
+display:block;
+font-family:Arial;
+font-size:1.1em;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:1.4em;
+}
+ul.video_list li span.time a {
+}
+ul.video_list li span.actions {
+-x-system-font:none;
+color:#AAAAAA;
+font-family:Arial;
+font-size:1.1em;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+}
+ul.video_list li span.actions a {
+}
+ul.video_list li span.message {
+font-size:1.1em;
+}
+ul.video_list li span.message b {
+color:#C80000;
+display:block;
+}
+ul.video_list li.yours {
+}
+ul.video_list li.yours a.thumb {
+}
+ul.video_list li.last_child {
+margin-right:0pt;
+padding-right:0pt;
+}
+ul.video_list li form.privacy input {
+vertical-align:middle;
+}
+ul.video_list li form.privacy label {
+cursor:pointer;
+font-size:1.1em;
+}
+ul.video_list li form.privacy span {
+font-size:1.1em;
+}
+
+.rssHeader
+{
+float:right;
+margin-top:4px;
+margin-right:4px;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, li, dl, dd, hr, address {
+font-style:normal;
+font-weight:normal;
+}
+
+.HomePost {
+border-color:#EEEEEE;
+border-style:solid;
+border-width:0pt 0pt 1px;
+padding-bottom:6pt;
+}
+
+a:link, a:visited, .CommonTitle a:link, .CommonTitle a:active, .CommonTitle a:visited {
+color:#4B6CCD;
+text-decoration:none;
+}
+
+
+.CommonTitle, .CommonTitle a:link, .CommonTitle a:active, .CommonTitle a:visited, .CommonTitle a:hover, .CommonTitle h1 {
+font-size:160%;
+line-height:130%;
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size-adjust:none;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+letter-spacing:0px;
+margin-bottom:11px;
+padding:0px;
+
+}
+
+.BlogPostFooter
+{
+ text-align:right;
+}
+
+.BlogPostHeader {
+margin-top:6pt;
+margin-bottom:4px;
+}
+
+body {
+color:#131313;
+font-family:Verdana,sans-serif;
+font-size:0.86em;
+font-size-adjust:none;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+text-align:center;
+line-height:1.46em;
+}
+
+div.submitted, .description {
+border-bottom:1px dotted #EEEEEE;
+color:#898989;
+font-size:0.92em;
+margin-bottom:8px;
+width:100%;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, li, dl, dd, hr, address {
+font-style:normal;
+font-weight:normal;
+}
+
+h2 {
+font-size:160%;
+line-height:130%;
+margin-top:4pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family:Georgia,"Times New Roman",Times,serif;
+}
+
+.postInfo{
+margin:0pt 0pt 10px;
+}
+
+.CommonSearchResultArea img {
+padding:4px 8px 8px 10px;
+}
+
+.userWelcome a:link, .userWelcome  a:visited,.userWelcome  .CommonTitle a:link, .userWelcome  a:active {
+color:#FFFFFF;
+text-decoration:none;
+}
+
+ .userWelcome {
+margin: 4px 8px 8px 10px;
+
+}
+
+.Copyright {
+font-size:11px;
+margin-left:13px;
+margin-right:13px;
+margin-top:0px;
+text-align:right;
+}
+
+
+
+.CommonContentArea {
+   margin:16px 6pt 0pt 6pt;
+}
+
+.CommonSearchButtonOuter {
+background-image:none;
+}
+.CommonSearchButton {
+background-image:none;
+}
+
+.CommonSidebarHeader, .CommonSidebarContent, .CommonSidebarFooter {
+width:auto;
+}
+
+
+
+/* 
+Tab Strip Styles 
+*/
+
+.CommonTabBar
+{
+	margin-top: 3px;
+        background-color:transparent;
+  	height: 32px;
+  	overflow: hidden;
+        float:left;
+}
+
+.CommonTabBarInner
+{
+	border-width: 0px;
+}
+
+/* 
+Simple Tab Strip Styles 
+*/
+
+.CommonSimpleTabStripTab 
+{
+	color: #444;
+	font-size:12px; 
+	cursor:pointer;
+	border-width: 0px;
+	height: 30px;
+}
+
+.CommonSimpleTabStripTab A:LINK, .CommonSimpleTabStripTab A:VISITED, .CommonSimpleTabStripTab A:ACTIVE, .CommonSimpleTabStripTab A:HOVER
+{
+	display: block;
+	height: 22px;
+	padding-top: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+        color:#FFFFFF;
+        font-size:16px;
+        font-weight:bold;
+	text-decoration: none;
+}
+
+.CommonSimpleTabStripTabHover
+{
+        color:#FFFFFF;
+        font-size:16px;
+        font-weight:bold;
+	cursor:default;
+	cursor:pointer;
+        background-image:url(../images/codebetter/buttonback.png);
+        background-repeat:repeat-x;
+	height: 30px;
+	border-width: 0px;
+}
+
+.CommonSimpleTabStripTabHover A:LINK, .CommonSimpleTabStripTabHover A:VISITED, .CommonSimpleTabStripTabHover A:ACTIVE, .CommonSimpleTabStripTabHover A:HOVER
+{
+	display: block;
+	height: 22px;
+	padding-top: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	color:#FFFFFF;
+        font-size:16px;
+        font-weight:bold;
+	text-decoration: none;
+}
+
+.CommonSimpleTabStripSelectedTab
+{
+	font-size:16px; 
+	font-weight: bold;
+	color: #000000;
+	cursor:default;
+	cursor:pointer;
+	background-image:   background-image:url(../images/codebetter/buttonback.png);
+background-repeat:repeat-x;
+	height: 30px;
+	border-width: 0px;
+
+}
+
+.CommonSimpleTabStripSelectedTab A:LINK, .CommonSimpleTabStripSelectedTab A:VISITED, .CommonSimpleTabStripSelectedTab A:ACTIVE, .CommonSimpleTabStripSelectedTab A:HOVER
+{
+background-image:url(../images/codebetter/buttonback.png);
+background-repeat:repeat-x;
+
+	display: block;
+	height: 22px;
+	padding-top: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.CommonSidebarInnerArea, .CommonSidebarRoundTop .r1, .CommonSidebarRoundTop .r2, .CommonSidebarRoundTop .r3, .CommonSidebarRoundTop .r4, .CommonSidebarRoundBottom .r1, .CommonSidebarRoundBottom .r2, .CommonSidebarRoundBottom .r3, .CommonSidebarRoundBottom .r4 {
+background-color: transparent;
+border-color:#eee;
+}
+.CommonSidebarInnerArea, .CommonSidebarRoundTop .r1, .CommonSidebarRoundTop .r2, .CommonSidebarRoundTop .r3, .CommonSidebarRoundTop .r4, .CommonSidebarRoundBottom .r1, .CommonSidebarRoundBottom .r2, .CommonSidebarRoundBottom .r3, .CommonSidebarRoundBottom .r4 {
+background-color:#FFFFFF;
+border-color:#eee;
+}
+.CommonSidebarInnerArea {
+background-image:none;
+}
+
+#CommonSidebarRight .CommonSidebar {
+padding:0px 5px 0px 19px;
+margin-left:-12px;
+float:left;
+}
+
+.CommonSidebarTagCloud {
+font-size:80%;
+}
+, .CommonSidebarTagCloud a:link 
+{
+font-color:#666;
+}
+
+.CommonMessageArea {
+ width:70%;
+}
+
+.CommonSidebarContent li {
+
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin-bottom:4px;
+
+}
+
+.cb_avatar
+{
+
+
+}
+
+.BlogPostArea.None {
+clear:both;
+}
+
+.CommonSearchResultsArea
+{
+    margin: 4px 4px;
+}
+
+.CommonSearchResultArea.Weblog {
+background-image:none;
+}
+
+.CommonSearchResultArea {
+background-position:left top;
+background-repeat:no-repeat;
+border-color:#EEEEEE;
+border-style:solid;
+border-width:0pt 0pt 1px;
+margin:0pt 0pt 20px;
+min-height:46px;
+padding:0pt 0pt 0px 0px;
+}
+
+.cb_container{
+background-image:url(../images/codebetter/bodybg.png);
+background-repeat:repeat;
+
+}
+
+blockquote {
+background:#FFFFFF url(http://codebetter.com/themes/default/images/codebetter/blockquote.gif) no-repeat scroll 0px;
+padding:0pt 0pt 0pt 35px;
+border:none;
+background-position: left top;
+}
+
+
